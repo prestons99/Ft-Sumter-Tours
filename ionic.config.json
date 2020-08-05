@@ -1,0 +1,7 @@
+{
+  "name": "FtSumterTours",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
