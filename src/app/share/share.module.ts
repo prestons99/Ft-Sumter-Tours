@@ -8,6 +8,12 @@ import { SharePageRoutingModule } from './share-routing.module';
 
 import { SharePage } from './share.page';
 
+this.socialSharing.shareViaWhatsApp(Text, Image, URL).then((res) => {
+  // Success
+}).catch((e) => {
+  // Error!
+});
+
 @NgModule({
   imports: [
     CommonModule,

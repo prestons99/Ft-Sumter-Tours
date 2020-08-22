@@ -28,9 +28,7 @@ ion-menu.md ion-list#inbox-list {
 
 ion-menu.md ion-list#inbox-list ion-list-header {
   font-size: 22px;
-<<<<<<< HEAD
-  font-weight: 700;
-
+  font-weight: 600;
   min-height: 20px;
 }
 
@@ -39,11 +37,7 @@ ion-menu.md ion-list#labels-list ion-list-header {
 
   margin-bottom: 18px;
 
-<<<<<<< HEAD
   color: #a54444;
-=======
-  color: #757575;
->>>>>>> 7fcbde5618bfae2fed6987315e9bd33bb1e50c0a
 
   min-height: 26px;
 }
@@ -121,12 +115,9 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
-<<<<<<< HEAD
 }
 ion-menu{
   ion-content{
-      --ion-background-color:rgb(125, 123, 226);
+      --ion-background-color:rgb(255, 255, 255);
   }
-=======
->>>>>>> 7fcbde5618bfae2fed6987315e9bd33bb1e50c0a
 }

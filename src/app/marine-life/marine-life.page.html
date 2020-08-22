@@ -1,15 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Marine Life</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Marine Life</ion-title>
+    <ion-toolbar class="new-background-color">
+      <ion-buttons slot="start">
+        <ion-menu-button color="light"></ion-menu-button>
+      </ion-buttons>
+      <ion-title color="light">Marine Life</ion-title>
     </ion-toolbar>
   </ion-header>
+
+
+  <section class="full-width">
+    <header></header>
+    <ion-button expand="full" (click)="impact()" color="primary">Our Impact</ion-button>
+  </section>
+
+  <section class="full-width">
+    <header></header>
+    <ion-button expand="full" (click)="animals()" color="primary">Animals</ion-button>
+  </section>
+
+  <div class="row">
+    <div class="col">
+        <div class="text-center">
+            <h5 style="text-align: center;">Overview</h5>
+        </div>
+    </div>
+</div>
+
+<p>The sparkling waters of the Lowcountry in South Carolina are home to a variety of marine life.
+  The main reason for this is because of the very diverse ecosystem. A combination of areas
+  with saltwater, freshwater, and brackish water (salt/freshwater mix) give home to a diverse
+  community of marine life. It is not uncommon to see a group of bottlenose dolphins playing around
+  near Fort Sumter during your visit, or racing the boat! you will definitely see a laughing gull
+  or two (or twenty!) flying over your head. How many different Lowcountry creatures can you spot
+  on your trip to Fort Sumter?
+</p>

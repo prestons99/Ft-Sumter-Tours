@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: '/welcome',
     pathMatch: 'full'
   },
   {
@@ -14,7 +14,6 @@ const routes: Routes = [
   {
     path: 'demo',
     loadChildren: () => import('./demo/demo.module').then( m => m.DemoPageModule)
-<<<<<<< HEAD
   },
   {
     path: 'our-fleet',
@@ -39,7 +38,87 @@ const routes: Routes = [
   {
     path: 'welcome',
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
+  },  {
+    path: 'amenities',
+    loadChildren: () => import('./amenities/amenities.module').then( m => m.AmenitiesPageModule)
+  },
+  {
+    path: 'beacon-locations',
+    loadChildren: () => import('./beacon-locations/beacon-locations.module').then( m => m.BeaconLocationsPageModule)
+  },
+  {
+    path: 'overview',
+    loadChildren: () => import('./overview/overview.module').then( m => m.OverviewPageModule)
+  },
+  {
+    path: 'our-impact',
+    loadChildren: () => import('./our-impact/our-impact.module').then( m => m.OurImpactPageModule)
+  },
+  {
+    path: 'animals',
+    loadChildren: () => import('./animals/animals.module').then( m => m.AnimalsPageModule)
+  },
+  {
+    path: 'barnacle',
+    loadChildren: () => import('./barnacle/barnacle.module').then( m => m.BarnaclePageModule)
+  },
+  {
+    path: 'bottlenose',
+    loadChildren: () => import('./bottlenose/bottlenose.module').then( m => m.BottlenosePageModule)
+  },
+  {
+    path: 'pelican',
+    loadChildren: () => import('./pelican/pelican.module').then( m => m.PelicanPageModule)
+  },
+  {
+    path: 'cannonball',
+    loadChildren: () => import('./cannonball/cannonball.module').then( m => m.CannonballPageModule)
+  },
+  {
+    path: 'horseshoe',
+    loadChildren: () => import('./horseshoe/horseshoe.module').then( m => m.HorseshoePageModule)
+  },
+  {
+    path: 'laughing',
+    loadChildren: () => import('./laughing/laughing.module').then( m => m.LaughingPageModule)
+  },
+  {
+    path: 'loggerhead',
+    loadChildren: () => import('./loggerhead/loggerhead.module').then( m => m.LoggerheadPageModule)
+  },
+  {
+    path: 'manatee',
+    loadChildren: () => import('./manatee/manatee.module').then( m => m.ManateePageModule)
+  },
+  {
+    path: 'moon',
+    loadChildren: () => import('./moon/moon.module').then( m => m.MoonPageModule)
+  },
+  {
+    path: 'otter',
+    loadChildren: () => import('./otter/otter.module').then( m => m.OtterPageModule)
+  },
+  {
+    path: 'osprey',
+    loadChildren: () => import('./osprey/osprey.module').then( m => m.OspreyPageModule)
+  },
+  {
+    path: 'oyster',
+    loadChildren: () => import('./oyster/oyster.module').then( m => m.OysterPageModule)
+  },
+  {
+    path: 'drum',
+    loadChildren: () => import('./drum/drum.module').then( m => m.DrumPageModule)
+  },
+  {
+    path: 'fiddler',
+    loadChildren: () => import('./fiddler/fiddler.module').then( m => m.FiddlerPageModule)
+  },
+  {
+    path: 'egret',
+    loadChildren: () => import('./egret/egret.module').then( m => m.EgretPageModule)
   }
+
 ];
 
 @NgModule({

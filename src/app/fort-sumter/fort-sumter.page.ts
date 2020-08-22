@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fort-sumter',
   templateUrl: './fort-sumter.page.html',
   styleUrls: ['./fort-sumter.page.scss'],
 })
-export class FortSumterPage implements OnInit {
+export class FortSumterPage {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  go() {
+    this.router.navigate(['amenities']);
   }
 
+  yes() {
+    this.router.navigate(['overview']);
+  }
+
+  beacon() {
+    this.router.navigate(['beacon-locations']);
+  }
 }
+

@@ -13,7 +13,6 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-<<<<<<< HEAD
       title: 'Welcome',
       url: '/welcome',
     },
@@ -38,39 +37,6 @@ export class AppComponent implements OnInit {
       url: '/share',
     }
   ];
-=======
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
-    },
-    {
-      title: 'Demo',
-      url: '/demo',
-      icon: 'paper-plane'
-    },
-    {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
-    },
-    {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
-    },
-    {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
-    },
-    {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
-    }
-  ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
->>>>>>> 7fcbde5618bfae2fed6987315e9bd33bb1e50c0a
 
   constructor(
     private platform: Platform,
