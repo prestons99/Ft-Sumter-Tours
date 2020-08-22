@@ -39,8 +39,6 @@ const routes: Routes = [
   {
     path: 'welcome',
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
-=======
->>>>>>> 7fcbde5618bfae2fed6987315e9bd33bb1e50c0a
   }
 ];
 

@@ -3,13 +3,8 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-<<<<<<< HEAD
           <ion-list-header>Fort Sumter</ion-list-header>
           
-=======
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
->>>>>>> 7fcbde5618bfae2fed6987315e9bd33bb1e50c0a
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
@@ -20,11 +15,7 @@
         </ion-list>
 
         <ion-list id="labels-list">
-<<<<<<< HEAD
           <ion-list-header></ion-list-header>
-=======
-          <ion-list-header>Labels</ion-list-header>
->>>>>>> 7fcbde5618bfae2fed6987315e9bd33bb1e50c0a
 
           <ion-item *ngFor="let label of labels" lines="none">
             <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
@@ -36,7 +27,3 @@
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
 </ion-app>
-<<<<<<< HEAD
-
-=======
->>>>>>> 7fcbde5618bfae2fed6987315e9bd33bb1e50c0a
