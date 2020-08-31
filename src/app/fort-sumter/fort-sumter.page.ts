@@ -21,5 +21,9 @@ export class FortSumterPage {
   beacon() {
     this.router.navigate(['beacon-locations']);
   }
+
+  tours() {
+    this.router.navigate(['tours3d']);
+  }
 }
 

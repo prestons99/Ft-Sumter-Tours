@@ -117,6 +117,46 @@ const routes: Routes = [
   {
     path: 'egret',
     loadChildren: () => import('./egret/egret.module').then( m => m.EgretPageModule)
+  },
+  {
+    path: 'spirit-lowcountry',
+    loadChildren: () => import('./spirit-lowcountry/spirit-lowcountry.module').then( m => m.SpiritLowcountryPageModule)
+  },
+  {
+    path: 'spirit-charleston',
+    loadChildren: () => import('./spirit-charleston/spirit-charleston.module').then( m => m.SpiritCharlestonPageModule)
+  },
+  {
+    path: 'spirit-low-amenities',
+    loadChildren: () => import('./spirit-low-amenities/spirit-low-amenities.module').then( m => m.SpiritLowAmenitiesPageModule)
+  },
+  {
+    path: 'spirit-chs-amenities',
+    loadChildren: () => import('./spirit-chs-amenities/spirit-chs-amenities.module').then( m => m.SpiritChsAmenitiesPageModule)
+  },
+  {
+    path: 'construction',
+    loadChildren: () => import('./construction/construction.module').then( m => m.ConstructionPageModule)
+  },
+  {
+    path: 'first-battle',
+    loadChildren: () => import('./first-battle/first-battle.module').then( m => m.FirstBattlePageModule)
+  },
+  {
+    path: 'struggle',
+    loadChildren: () => import('./struggle/struggle.module').then( m => m.StrugglePageModule)
+  },
+  {
+    path: 'after',
+    loadChildren: () => import('./after/after.module').then( m => m.AfterPageModule)
+  },
+  {
+    path: 'tours3d',
+    loadChildren: () => import('./tours3d/tours3d.module').then( m => m.Tours3dPageModule)
+  },
+  {
+    path: 'castle-pickney',
+    loadChildren: () => import('./castle-pickney/castle-pickney.module').then( m => m.CastlePickneyPageModule)
   }
 
 ];

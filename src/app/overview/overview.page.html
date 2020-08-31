@@ -1,10 +1,48 @@
-
+<ion-content>
   <ion-header>
     <ion-toolbar class="new-background-color">
       <ion-buttons slot="start">
         <ion-menu-button color="light"></ion-menu-button>
-        <ion-back-button color="light"></ion-back-button>
+        <ion-back-button color="light" defaultHref="fort-sumter"></ion-back-button>
       </ion-buttons>
       <ion-title color="light">Overview</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-list>
+    <ion-item (click)="FS1861()">
+      <ion-thumbnail slot="start">
+        <img src="assets/icon/Fort_sumter_1861.jpg"><img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Construction</h2>
+      </ion-label>
+    </ion-item>
+
+  <ion-item (click)="First()">
+    <ion-thumbnail slot="start">
+      <img src="assets/icon/Confederate_Batteries_2.jpg"><img>
+    </ion-thumbnail>
+    <ion-label>
+      <h2>First Battle</h2>
+    </ion-label>
+  </ion-item>
+
+  <ion-item (click)="Struggle()">
+    <ion-thumbnail slot="start">
+      <img src="assets/icon/FTSumterSep1863a.jpg"><img>
+    </ion-thumbnail>
+    <ion-label>
+      <h2>Struggle for Charleston 1863-1865</h2>
+    </ion-label>
+  </ion-item>
+
+  <ion-item (click)="After()">
+    <ion-thumbnail slot="start">
+      <img src="assets/icon/after_the_war.jpg"><img>
+    </ion-thumbnail>
+    <ion-label>
+      <h2>After the War</h2>
+    </ion-label>
+  </ion-item>
+</ion-list>
