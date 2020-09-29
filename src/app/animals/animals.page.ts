@@ -1,76 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { AnimalProviderService } from '../animal-provider.service';
 
 @Component({
   selector: 'app-animals',
   templateUrl: './animals.page.html',
   styleUrls: ['./animals.page.scss'],
 })
-export class AnimalsPage {
+export class AnimalsPage implements OnInit {
 
-  constructor(private router: Router) { }
 
-  barnacle() {
-    this.router.navigate(['barnacle']);
-  }
+	public animal = null;
 
-  bottlenose() {
-    this.router.navigate(['bottlenose']);
-  }
+	constructor(
+		public activatedRoute: ActivatedRoute,
+		public animalService : AnimalProviderService,
+	) {
+		this.activatedRoute.queryParams.subscribe((data)=>{
+			let animalId = data.animalId;
+			this.animal = this.animalService.getAnimal(animalId);
+		});
+	}
 
-  pelican() {
-    this.router.navigate(['pelican']);
-  }
-
-  cannonball() {
-    this.router.navigate(['cannonball']);
-  }
-
-  horseshoe() {
-    this.router.navigate(['horseshoe']);
-  }
-
-  laughing() {
-    this.router.navigate(['laughing']);
-  }
-
-  loggerhead() {
-    this.router.navigate(['loggerhead']);
-  }
-
-  manatee() {
-    this.router.navigate(['manatee']);
-  }
-
-  moon() {
-    this.router.navigate(['moon']);
-  }
-
-  otter() {
-    this.router.navigate(['otter']);
-  }
-
-  osprey() {
-    this.router.navigate(['osprey']);
-  }
-
-  oyster() {
-    this.router.navigate(['oyster']);
-  }
-
-  drum() {
-    this.router.navigate(['drum']);
-  }
-
-  fiddler() {
-    this.router.navigate(['fiddler']);
-  }
-
-  egret() {
-    this.router.navigate(['egret']);
-  }
-
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 }
