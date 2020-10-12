@@ -118,7 +118,9 @@ ion-item.selected {
 }
 ion-menu{
   ion-content{
-      --ion-background-color:#1b57d8;
+      font-size: 24px;
+      --ion-background-color:#2a54b1;
       --ion-text-color:#ffffff;
+      --ion-list-color: #ffffff;
   }
 }
