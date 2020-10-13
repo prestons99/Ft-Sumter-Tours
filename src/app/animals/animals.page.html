@@ -11,3 +11,16 @@
 	<img [src]='animal?.image' />
 	<div [innerHTML]='animal?.description'></div>
 </ion-content>
+<ion-content>
+  <div *ngIf='(animalService?.isLoading$ | async)' class="ion-padding ion-margin ion-text-center">
+    <ion-spinner ></ion-spinner>
+  </div>
+  <ion-list>
+    <ion-item button (click)='openAnimal(animal.id)' *ngFor='let animal of (animalService.animals$ | async)'>
+      <img [src]='animal?.image' slot='start' />
+      <ion-label>
+        {{animal?.name}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

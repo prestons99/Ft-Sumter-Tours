@@ -3,27 +3,37 @@
 }
 
 #list {
-    width: 170px;
-    margin: 30px auto;
-    font-size: 20px;
-  }
-  #list ul {
-    margin-top: 30px;
-  }
-  #list ul li {
-    text-align: left;
-    list-style: disc;
-    margin: 10px 0px;
-  }
+  width: 170px;
+  margin: 30px auto;
+  font-size: 20px;
+}
+#list ul {
+  margin-top: 30px;
+}
+#list ul li {
+  text-align: left;
+  list-style: disc;
+  margin: 10px 0px;
+}
 
   p {
     color: #567cce;
+    margin-bottom: -20px;
 }
 
 li {
     color:#567cce;
 }
 
-h5 {
+h3 {
     color: #567cce;
+    margin-bottom: -20px;
+}
+div {
+  color: #567cce;
+  margin-bottom: 0px
+}
+
+.parent {
+  display: flex;
 }
