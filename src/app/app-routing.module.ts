@@ -157,6 +157,10 @@ const routes: Routes = [
   {
     path: 'castle-pickney',
     loadChildren: () => import('./castle-pickney/castle-pickney.module').then( m => m.CastlePickneyPageModule)
+  },
+  {
+    path: 'animal-view',
+    loadChildren: () => import('./animal-view/animal-view.module').then( m => m.AnimalViewPageModule)
   }
 
 ];

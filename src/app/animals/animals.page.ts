@@ -9,16 +9,20 @@ import { AnimalProviderService } from '../animal-provider.service';
 })
 export class AnimalsPage implements OnInit {
 
-
-	public animal = null;
-
 	constructor(
 		public activatedRoute: ActivatedRoute,
 		public animalService : AnimalProviderService,
+		public router : Router,
 	) {
-		this.activatedRoute.queryParams.subscribe((data)=>{
-			let animalId = data.animalId;
-			this.animal = this.animalService.getAnimal(animalId);
+		this.animalService.refresh();
+		
+	}
+
+	openAnimal(animalId : String){
+		this.router.navigate(['/animal-view'],{
+			queryParams : {
+				animalId : animalId
+			}
 		});
 	}
 

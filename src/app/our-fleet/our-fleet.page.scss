@@ -1,3 +1,22 @@
 .new-background-color{
     --background: #d41c1c;
 }
+
+.section-image{
+	height: 300px;
+	overflow: hidden;
+	background-size: cover;
+}
+
+.white-overlay{
+	height: 100%;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.grid-text{
+	height: 100%;
+	ion-row{
+		height: 100%;
+		align-items: center;
+	}
+}
