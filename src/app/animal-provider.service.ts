@@ -26,7 +26,7 @@ export class AnimalProviderService {
 				id: "1",
 				name: "Barnacle",
 				description: "<h1>Barnacle</h1>",
-				image: "assets/icon/barnacle.jpg"
+				image: "assets/icon/barnacle.jpg",
 			}, {
 				id: "2",
 				name: "Bottlenose Dolphin",
@@ -98,125 +98,6 @@ export class AnimalProviderService {
 				description: "<h1>Snowy Egret</h1>",
 				image: "assets/icon/Snowy_Egret.jpg",
 				content : `
-				
-				<table style="border: 1px solid #ccc; background-color: white; vertical-align: middle; width: 248px; margin:0.2em 0 0.2em 1em; float:right; clear:right;">
-
-
-
-				<tbody><tr>
-				<td style="border: 1px solid #dedede; padding: 3px">
-				<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935768785">
-				<table class="clade" style="font-size:75%;line-height:80%">
-				
-				
-				<tbody><tr>
-				<td class="clade-label first"><b>Aves</b>
-				</td>
-				<td rowspan="2" class="clade-leaf">
-				<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935768785">
-				<table class="clade">
-				
-				
-				<tbody><tr>
-				<td class="clade-label first"><a href="/wiki/Palaeognathae" title="Palaeognathae">Palaeognathae</a>
-				</td>
-				<td rowspan="2" class="clade-leaf">
-				<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935768785">
-				<table class="clade">
-				
-				
-				<tbody><tr>
-				<td class="clade-label first"> 
-				</td>
-				<td rowspan="2" class="clade-leaf">
-				<p><a href="/wiki/Struthioniformes" class="mw-redirect" title="Struthioniformes">Struthioniformes</a>
-				</p>
-				</td></tr>
-				<tr>
-				<td class="clade-slabel"> 
-				</td></tr>
-				<tr>
-				<td class="clade-label"> 
-				</td>
-				<td rowspan="2" class="clade-leaf">
-				<p><a href="/wiki/Tinamiformes" class="mw-redirect" title="Tinamiformes">Tinamiformes</a>
-				</p>
-				</td></tr>
-				<tr>
-				<td class="clade-slabel last"> 
-				</td></tr></tbody></table>
-				</td></tr>
-				<tr>
-				<td class="clade-slabel"> 
-				</td></tr>
-				<tr>
-				<td class="clade-label"><a href="/wiki/Neognathae" title="Neognathae">Neognathae</a>
-				</td>
-				<td rowspan="2" class="clade-leaf">
-				<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935768785">
-				<table class="clade">
-				
-				
-				<tbody><tr>
-				<td class="clade-label first"> 
-				</td>
-				<td rowspan="2" class="clade-leaf">
-				<p>Other birds (<a href="/wiki/Neoaves" title="Neoaves">Neoaves</a>)
-				</p>
-				</td></tr>
-				<tr>
-				<td class="clade-slabel"> 
-				</td></tr>
-				<tr>
-				<td class="clade-label"><a href="/wiki/Galloanserae" class="mw-redirect" title="Galloanserae">Galloanserae</a>
-				</td>
-				<td rowspan="2" class="clade-leaf">
-				<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935768785">
-				<table class="clade">
-				
-				
-				<tbody><tr>
-				<td class="clade-label first"> 
-				</td>
-				<td rowspan="2" class="clade-leaf">
-				<p><a href="/wiki/Anseriformes" title="Anseriformes">Anseriformes</a>
-				</p>
-				</td></tr>
-				<tr>
-				<td class="clade-slabel"> 
-				</td></tr>
-				<tr>
-				<td class="clade-label"> 
-				</td>
-				<td rowspan="2" class="clade-leaf">
-				<p><a href="/wiki/Galliformes" title="Galliformes">Galliformes</a>
-				</p>
-				</td></tr>
-				<tr>
-				<td class="clade-slabel last"> 
-				</td></tr></tbody></table>
-				</td></tr>
-				<tr>
-				<td class="clade-slabel last"> 
-				</td></tr></tbody></table>
-				</td></tr>
-				<tr>
-				<td class="clade-slabel last"> 
-				</td></tr></tbody></table>
-				</td></tr>
-				<tr>
-				<td class="clade-slabel last"> 
-				</td></tr></tbody></table>
-				</td></tr>
-				
-				
-				<tr>
-				<td style="text-align: left; font-size: 88%; border: 0; padding: 0;">Basal divergences of modern birds<br>based on <a href="/wiki/Sibley-Ahlquist_taxonomy" class="mw-redirect" title="Sibley-Ahlquist taxonomy">Sibley-Ahlquist taxonomy</a>
-				</td></tr></tbody></table>
-				
-				
-				
-				
 				
 				`
 			}

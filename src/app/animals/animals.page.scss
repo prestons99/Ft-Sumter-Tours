@@ -1,14 +1,17 @@
-.new-background-color{
-    --background: #d41c1c;
-}
+// .new-background-color{
+//     --background: #d41c1c;
+// }
 
 .img-animal{
 	max-width: 100px;
+	margin-left: -15px;
+	border-top: none;
+	border-bottom: none;
 }
 
 .section-with-image{
 	height: 200px;
-	background-image: url("src/assets/icon/Oyster_reef_Hunting_Island_SC.jpg");
+	background-image: url("src/assets/icon/1491581693744.jpg");
 	background-size: cover;
 	position: relative;
 }
