@@ -1,7 +1,8 @@
 {
   "name": "FtSumterTours",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }
