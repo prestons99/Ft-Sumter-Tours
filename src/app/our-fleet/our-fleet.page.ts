@@ -14,6 +14,10 @@ export class OurFleetPage {
     this.router.navigate(['spirit-lowcountry']);
   }
 
+  charleston() {
+    this.router.navigate(['spirit-charleston']);
+  }
+
   ngOnInit() {
   }
 
