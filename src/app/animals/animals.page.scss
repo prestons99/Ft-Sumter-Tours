@@ -11,7 +11,7 @@
 
 .section-with-image{
 	height: 200px;
-	background-image: url("src/assets/icon/1491581693744.jpg");
+	background-image: url("src/assets/icon/FTSumterSep1863a.jpg");
 	background-size: cover;
 	position: relative;
 }
@@ -23,4 +23,72 @@
 	right: 0;
 	left: 0;
 	bottom: 0;
+}
+
+.div1{
+	height: 300px;
+	width: 100%;
+	border: 1px solid red;
+	background-image: url("src/assets/icon/FTSumterSep1863a.jpg");
+	position: relative;
+}
+
+.div2{
+	border: 1px solid black;
+	// background: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+}
+
+.div3{
+	height: 100px;
+	width: 100px;
+	border: 1px solid blue;
+}
+
+ion-grid{
+	height: 300px;
+}
+
+ion-row{
+	height : 100%;
+	align-items : center;
+}
+
+ion-col{
+	font-size: 24px;
+	text-align: center;
+	color: white;
+}
+
+
+ion-slides{
+	height: 100%;
+}
+
+.first-slide{
+	background-image: url("src/assets/icon/FTSumterSep1863a.jpg");
+}
+
+.second-slide{
+	background-image: url("src/assets/icon/FTSumterSep1863a.jpg");
+}
+
+.third-slide{
+	background-image: url("src/assets/icon/FTSumterSep1863a.jpg");
+}
+
+
+
+.sidebar-button{
+	height: 100px;
+	width: 100px;
+	border: 1px solid black;
+}
+
+.sidebar{
+	position: absolute;
 }
