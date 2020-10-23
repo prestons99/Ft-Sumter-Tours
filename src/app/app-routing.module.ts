@@ -38,7 +38,8 @@ const routes: Routes = [
   {
     path: 'welcome',
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
-  },  {
+  },
+  {
     path: 'amenities',
     loadChildren: () => import('./amenities/amenities.module').then( m => m.AmenitiesPageModule)
   },
@@ -162,15 +163,6 @@ const routes: Routes = [
     path: 'animal-view',
     loadChildren: () => import('./animal-view/animal-view.module').then( m => m.AnimalViewPageModule)
   },
-  {
-    path: 'level2',
-    loadChildren: () => import('./level2/level2.module').then( m => m.Level2PageModule)
-  },
-  {
-    path: 'level3',
-    loadChildren: () => import('./level3/level3.module').then( m => m.Level3PageModule)
-  }
-
 ];
 
 @NgModule({
