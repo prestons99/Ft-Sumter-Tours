@@ -1,0 +1,36 @@
+.img-animal{
+	max-width: 100px;
+	margin-left: -15px;
+	border-top: none;
+	border-bottom: none;
+}
+
+.section-with-image{
+	height: 200px;
+	background-image: url("src/assets/icon/spiritline_cruises_spirit_of_charleston.jpg");
+	background-size: cover;
+	position: relative;
+}
+
+.section-overlay{
+	position: absolute;
+	background : rgba(0,0,0,0.4);
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+ion-grid{
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+
+.logo-border {
+    border-bottom: 1px solid #005295;
+}
+
+p {
+    color: #005295;
+}
