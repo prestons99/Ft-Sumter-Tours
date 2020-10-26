@@ -1,26 +1,34 @@
-.img-animal{
-	max-width: 100px;
-	margin-left: -15px;
-	border-top: none;
-	border-bottom: none;
+.new-background-color{
+    --background: #d41c1c;
 }
 
-.section-with-image{
-	height: 200px;
-	background-image: url("src/assets/icon/spirit_of_lowcountry.jpg");
-	background-size: cover;
-	position: relative;
+
+ion-slides {
+    height: 100%,
 }
 
-.section-overlay{
+.swiper-slide {
+    display: block;
+}
+
+.swiper-slide h2 {
+    margin-top: 2.8rem;
+}
+
+.swiper-slide img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 75px 20 75px;
+    pointer-events: none;
+}
+
+
+.sidebar-button{
+	height: 100px;
+	width: 100px;
+	border: 1px solid black;
+}
+
+.sidebar{
 	position: absolute;
-	background : rgba(0,0,0,0.4);
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-}
-.button-inner{
-    align-items: left;
-    justify-content: left;
 }

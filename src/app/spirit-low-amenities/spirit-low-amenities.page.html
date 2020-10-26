@@ -1,24 +1,42 @@
 <ion-header>
   <ion-toolbar class="new-background-color">
-    <ion-buttons slot="secondary">
-      <ion-back-button text="" color="dark"></ion-back-button>
-      <ion-menu-button color="dark"></ion-menu-button>
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+      <ion-back-button text="" color="light"></ion-back-button>
     </ion-buttons>
-    <div class="section-with-image">
-      <div class='section-overlay'></div>
-    </div>
-    <ion-title color="light">Amenities</ion-title>
+    <ion-title color="light">Swipe to see next floor</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <div class="swiper-container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-    </div>
+
+
+<ion-content fullscreen class="ion-padding" scroll-y="false">
+
+  <ion-slides [options]="{fadeEffect: {
+    crossFade: true
+    },autoplay: {
+    delay: 10000
+    }}">
+    <ion-slide>
+      <div class="first-slide">
+        <img src="\assets\icon\amenities1.jpg"/>
+        <h2>Swipe -></h2>
+      </div>
+    </ion-slide>
+    
+    <ion-slide>
+      <div class="second-slide">
+        <img src="\assets\icon\amenities2.jpg"/>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="third-slide">
+        <img src="\assets\icon\amenities3.jpg"/>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+
 </ion-content>
 
 

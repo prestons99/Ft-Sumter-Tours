@@ -12,17 +12,17 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-	<!-- <div *ngIf='(animalService?.isLoading$ | async)' class="ion-padding ion-margin ion-text-center">
+	<div *ngIf='(animalService?.isLoading$ | async)' class="ion-padding ion-margin ion-text-center">
     <ion-spinner ></ion-spinner>
   </div>
   <ion-list>
-    <ion-item button (click)='openAnimal(animal.id)' detail="false" *ngFor='let animal of (animalService.animals$ | async)'>
+    <ion-item button (click)='openAnimal(animal.id)' lines="full" detail="false" *ngFor='let animal of (animalService.animals$ | async)'>
       <img class='img-animal' [src]='animal?.image' slot='start' />
       <ion-label>
         {{animal?.name}}
       </ion-label>
     </ion-item>
-  </ion-list> -->
+  </ion-list>
 
 	<!-- <div class='div1'>
 	<div class='div2'> -->

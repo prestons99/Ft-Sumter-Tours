@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/welcome',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   {
@@ -163,6 +163,11 @@ const routes: Routes = [
     path: 'animal-view',
     loadChildren: () => import('./animal-view/animal-view.module').then( m => m.AnimalViewPageModule)
   },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+
 ];
 
 @NgModule({
