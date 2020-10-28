@@ -1,44 +1,87 @@
-
-    <ion-buttons slot="start">
-      <ion-menu-button color="dark"></ion-menu-button>
-    </ion-buttons>
+<ion-content [scrollX]="false" [scrollY]="false">
 
 
+	<div class='absolute-container'>
 
-<ion-content>
+
+		<div class='menu-button-wrapper'>
+			<ion-menu-button color='light'></ion-menu-button>
+		</div> 
+	
+		<div class='filled-grid'>
+			<ion-grid class='ion-no-padding'>
+				<ion-row class='ion-no-padding'>
+					<ion-col class='ion-align-self-center col-page-content'>
+						<img src='assets/icon/logo_white.png' />
+						<div class='lbl-app-name'>
+							FORT<br/>SUMTER
+						</div>
+						<app-canon-spacer></app-canon-spacer>
+						<div class='lbl-monument'>
+							NATIONAL MONUMENT
+						</div>
+						<div class='lbl-monument-description'>
+							Experience where the Civil War began!
+						</div>
+					</ion-col>
+					<ion-col size='auto' class='ion-no-padding sidebar-column'>
+						<div class='btn-sidemenu btn-sidemenu--overview'>
+							<img src='assets/icon/home/overview.png' />
+							<div class='btn-label'>
+								Overview
+							</div>
+						</div>
+						<div class='btn-sidemenu btn-sidement--360'>
+							<img src='assets/icon/home/360vr.png' />
+							<div class='btn-label'>
+								360 VR<br/>Tour
+							</div>
+						</div>
+						<div class='btn-sidemenu btn-sidement--postcard'>
+							<img src='assets/icon/home/postcard.png' />
+							<div class='btn-label'>
+								PostCard<br/>Photo
+							</div>
+						</div>
+						<div class='btn-sidemenu btn-sidement--viewfinder'>
+							<img src='assets/icon/home/viewfinder.png' />
+							<div class='btn-label'>
+								PostCard<br/>Photo
+							</div>
+						</div>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</div>
+
+		<ion-slides [options]="slidesOptions">
+
+			<ion-slide>
+				<div class="first-slide"></div>
+			</ion-slide>
+
+			<ion-slide>
+				<div class="second-slide"></div>
+			</ion-slide>
+
+			<ion-slide>
+				<div class="third-slide">
+				</div>
+			</ion-slide>
+
+			<ion-slide>
+				<div class="fourth-slide">
+				</div>
+			</ion-slide>
+
+		</ion-slides>
+
+		
+
+	</div>
 
 
-  <ion-slides [options]="{fadeEffect: {
-    crossFade: true
-    },autoplay: {
-    delay: 3000
-    }}">
-  
-    <ion-slide>
-      <div class="first-slide">
-        <img src="\assets\icon\mainmenu1.jpg"/>
-      </div>
-    </ion-slide>
-    
-    <ion-slide>
-      <div class="second-slide">
-        <img src="\assets\icon\mainmenu2.jpg"/>
-      </div>
-    </ion-slide>
 
-    <ion-slide>
-      <div class="third-slide">
-        <img src="\assets\icon\mainmenu3.jpg"/>
-      </div>
-    </ion-slide>
-
-    <ion-slide>
-      <div class="fourth-slide">
-        <img src="\assets\icon\mainmenu4.jpg"/>
-      </div>
-    </ion-slide>
-
-  </ion-slides>
 
 
 </ion-content>

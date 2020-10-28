@@ -1,19 +1,6 @@
-// .first-slide{
-// 	background-image: url("src/assets/icon/FTSumterSep1863a.jpg");
-// }
-
-// .second-slide{
-// 	background-image: url("src/assets/icon/FTSumterSep1863a.jpg");
-// }
-
-// .third-slide{
-// 	background-image: url("src/assets/icon/FTSumterSep1863a.jpg");
-// }
-
 .new-background-color{
     --background: #d41c1c;
 }
-
 
 ion-slides {
     height: 100%,
@@ -42,4 +29,109 @@ ion-slides {
 
 .sidebar{
 	position: absolute;
+}
+
+
+.first-slide,
+.second-slide,
+.third-slide,
+.fourth-slide{
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.first-slide{
+	background-image: url("/assets/icon/mainmenu1.jpg");
+}
+.second-slide{
+	background-image: url("/assets/icon/mainmenu2.jpg");
+}
+.third-slide{
+	background-image: url("/assets/icon/mainmenu3.jpg");
+}
+.fourth-slide{
+	background-image: url("/assets/icon/mainmenu4.jpg");
+}
+
+.absolute-container{
+	height: 100%;
+	width: 100%;
+}
+
+
+.filled-grid{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 2;
+	ion-grid{
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+.menu-button-wrapper{
+	position: absolute;
+	z-index: 4;
+	height: 60px;
+	width: 60px;
+}
+
+.sidebar-column{
+	background-color: rgba(255,255,255,0.75);
+	padding: 16px;
+	border-top-left-radius: 13px;
+	border-bottom-left-radius: 13px;
+	text-align: center;
+}
+
+.btn-sidemenu{
+	img{
+		margin: auto;
+		max-height: 36px;
+		max-width: 36px;
+	}
+	.btn-label{
+		font-size: 14px;
+		color: #134E91;
+		padding-top: 4px;
+	}
+}
+
+.btn-sidemenu:not(:last-child){
+	padding-bottom: 16px;
+}
+
+.col-page-content{
+	text-align: center;
+}
+
+
+.lbl-app-name{
+	font-size: 48px;
+	color: white;
+	padding-top: 16px;
+	line-height: 40px;
+}
+
+app-canon-spacer{
+	padding: 8px 48px;
+}
+
+.lbl-monument{
+	font-size: 18px;
+	color: white;
+}
+
+.lbl-monument-description{
+	font-size: 14px;
+	color: white;
+	padding-top: 12px;
 }
