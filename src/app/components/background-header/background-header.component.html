@@ -1,0 +1,10 @@
+<div class='background-header' [ngStyle]="{'background-image' : 'url('+background+')'}">
+	<!-- <ng-content select='[slot="top"]'></ng-content> -->
+	<ion-grid class='title-wrapper'>
+		<ion-row>
+			<ion-col>
+				<ng-content select='[slot="title"]'></ng-content>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</div>

@@ -2,6 +2,10 @@
     --background: #d41c1c;
 }
 
+ion-toolbar{
+	padding-top: 0px !important;
+}
+
 ion-slides {
     height: 100%,
 }
@@ -78,6 +82,7 @@ ion-slides {
 }
 
 .menu-button-wrapper{
+	padding-top : var(--ion-safe-area-top);
 	position: absolute;
 	z-index: 4;
 	height: 60px;

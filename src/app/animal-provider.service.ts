@@ -27,8 +27,8 @@ export class AnimalProviderService {
 				name: "Barnacle",
 				description: "<h1 color=secondary>Barnacle</h1>",
 				image: "assets/icon/barnacle.jpg",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"><p>Barnacles are commonly found in the intertidal zone, rocky shores and estuaries. They are found attached to rocks, walls, stems of marsh grass, and boats. They have to live in areas where they are covered by the tide at least two times daily. They prefer to settle in areas already colonized by other barnacles.</p></font>
-				<font face="AvenirNext-Regular" size="4" color="005295"><p>Class: &nbsp;Maxillopoda</p>
+				content: `<font face="Helvetica Neue" size="4" color="005295"><p>Barnacles are commonly found in the intertidal zone, rocky shores and estuaries. They are found attached to rocks, walls, stems of marsh grass, and boats. They have to live in areas where they are covered by the tide at least two times daily. They prefer to settle in areas already colonized by other barnacles.</p></font>
+				<font face="Helvetica Neue" size="4" color="005295"><p>Class: &nbsp;Maxillopoda</p>
 				<p>Order: &nbsp;Sessilia &ndash; sessile barnacles</p>
 				<p><span style="font-weight: 400;">Family: &nbsp;Chthamalidae</span></p>
 				<p><strong>Description: </strong></p>
@@ -64,8 +64,8 @@ export class AnimalProviderService {
 				name: "Bottlenose Dolphin",
 				description: "<h1>Bottlenose Dolphin</h1>",
 				image: "assets/icon/bottlenose_dolphin.jpg",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"><p>The bottlenose dolphin is considered &ldquo;the most adaptable cetacean&rdquo;because the species occurs in a wide variety of habitats. While pelagic populations exist far offshore, others inhabit coastal waters,&nbsp;such as bays, estuaries, and rivers.</p></font>
-				<font face="AvenirNext-Regular" size="4" color="005295"><p>Class: Mammalia - mammals</p>
+				content: `<font face="Helvetica Neue" size="4" color="005295"><p>The bottlenose dolphin is considered &ldquo;the most adaptable cetacean&rdquo;because the species occurs in a wide variety of habitats. While pelagic populations exist far offshore, others inhabit coastal waters,&nbsp;such as bays, estuaries, and rivers.</p></font>
+				<font face="Helvetica Neue" size="4" color="005295"><p>Class: Mammalia - mammals</p>
 				<p>Order: Cetacea - all whales, beluga and narwhal, river dolphins, ocean dolphins, and porpoises</p>
 				<p>Family: Delphinidae - killer whales, marine dolphins, and pilot&nbsp;whales</p>
 				<p>Subfamily: Delphininae</p>
@@ -114,8 +114,8 @@ export class AnimalProviderService {
 				name: "Brown Pelican",
 				description: "<h1>Brown Pelican</h1>",
 				image: "assets/icon/brown_pelican.jpg",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"><p>The brown pelican is commonly found along the coast; ocean and salt marshes.&nbsp;They are found along both the west and east coasts of North, Central&nbsp;and South America.&nbsp;After the breeding season, flocks will migrate north along both the&nbsp;west and east coasts of N. America. Migration south occurs in&nbsp;preparation of the winter. Winters south along coasts of Americas.</p></font>
-				<font face="AvenirNext-Regular" size="4" color="005295"><p>Class: Aves &ndash; birds</p>
+				content: `<font face="Helvetica Neue" size="4" color="005295"><p>The brown pelican is commonly found along the coast; ocean and salt marshes.&nbsp;They are found along both the west and east coasts of North, Central&nbsp;and South America.&nbsp;After the breeding season, flocks will migrate north along both the&nbsp;west and east coasts of N. America. Migration south occurs in&nbsp;preparation of the winter. Winters south along coasts of Americas.</p></font>
+				<font face="Helvetica Neue" size="4" color="005295"><p>Class: Aves &ndash; birds</p>
 				<p>Order: Pelecaniformes &ndash; includes pelicans, cormorants, gannets and&nbsp;boobies</p>
 				<p>Family: Pelecanidae &ndash; which includes the American White Pelican Members of the order Pelecaniformes are colonial fish-eaters with a&nbsp;throat poach and webbed feet. There are about 55 species found worldwide.</p>
 				<p>There are eight species of pelicans found worldwide. The Brown&nbsp;Pelican with a wingspan of 7 ft is one of the smallest pelicans; the&nbsp;largest of the pelican family can weigh up to 30 pounds.</p>
@@ -153,8 +153,8 @@ export class AnimalProviderService {
 				name: "Cannonball Jellyfish",
 				description: "<h1>Cannonball Jellyfish</h1>",
 				image: "assets/icon/cannonball_jellyfish.jpg",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"><p>Found in estuary and saline waters. Range from New England to Brazil in the western Atlantic, from southern California to&nbsp;Ecuador in the eastern Pacific, and from the Sea of Japan in South China Sea&nbsp;in the western pacific.</p></font>
-				<font face="AvenirNext-Regular" size="4" color="005295"><p>Class: Scyphozoa</p>
+				content: `<font face="Helvetica Neue" size="4" color="005295"><p>Found in estuary and saline waters. Range from New England to Brazil in the western Atlantic, from southern California to&nbsp;Ecuador in the eastern Pacific, and from the Sea of Japan in South China Sea&nbsp;in the western pacific.</p></font>
+				<font face="Helvetica Neue" size="4" color="005295"><p>Class: Scyphozoa</p>
 				<p>Order: Rhizostomae</p>
 				<p>Family: Stomolophidae</p>
 				<p><strong>Description:</strong></p>
@@ -191,8 +191,8 @@ export class AnimalProviderService {
 				name: "Horseshoe Crab",
 				description: "<h1>Horseshoe Crab</h1>",
 				image: "assets/icon/horseshoe_crab.jpg",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"><p>Horseshoe crabs are commonly found on sandy bottoms of shallow&nbsp;coastal seawaters and bays. They can be found in the Atlantic Coast of North America and the Gulf of Mexico.</p></font>
-				<font face="AvenirNext-Regular" size="4" color="005295"><p>Class: Merostomata</p>
+				content: `<font face="Helvetica Neue" size="4" color="005295"><p>Horseshoe crabs are commonly found on sandy bottoms of shallow&nbsp;coastal seawaters and bays. They can be found in the Atlantic Coast of North America and the Gulf of Mexico.</p></font>
+				<font face="Helvetica Neue" size="4" color="005295"><p>Class: Merostomata</p>
 				<p>Order: Xiphosura</p>
 				<p>Family: Limulidae</p>
 				<p>The horseshoe crab is a member of the phylum Arthropoda, which&nbsp;include insects, spiders, ticks, scorpions, crabs, shrimp, lobster and&nbsp;barnacles. They are also a member of the class Merostomata, which has no other species in North America.</p>
@@ -244,8 +244,8 @@ export class AnimalProviderService {
 				name: "Laughing Gull",
 				description: "<h1>Laughing Gull</h1>",
 				image: "assets/icon/laughing_gull.jpg",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"><p>The laughing gull is typically found in coastal areas, but they are alsocommonly found in estuarine habitats. They can be found along the Atlantic and Gulf coasts of North America. Most will migrate to Florida during the winters.</p></font>
-				<font face="AvenirNext-Regular" size="4" color="005295"><p>Class: Aves &ndash; birds</p>
+				content: `<font face="Helvetica Neue" size="4" color="005295"><p>The laughing gull is typically found in coastal areas, but they are alsocommonly found in estuarine habitats. They can be found along the Atlantic and Gulf coasts of North America. Most will migrate to Florida during the winters.</p></font>
+				<font face="Helvetica Neue" size="4" color="005295"><p>Class: Aves &ndash; birds</p>
 				<p>Order: Charadriiformes - shorebirds</p>
 				<p>Family: Laridae &ndash; gulls, terns, jaegers and skimmers The family Laridae consists of about 105 species, found on every continent.</p>
 				<p><strong>Description:</strong></p>
@@ -279,8 +279,8 @@ export class AnimalProviderService {
 				name: "Loggerhead Sea Turtle",
 				description: "<h1>Loggerhead Sea Turtle</h1>",
 				image: "assets/icon/loggerhead_sea_turtle.jpg",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"><p>They prefer to feed in coastal bays and estuaries, and can sometimes be found feeding in the shallow waters along the continental shelf of the&nbsp;Atlantic Ocean. Loggerhead sea turtles have a wide range. They can be found throughout&nbsp;the western Atlantic from Canada to Argentina, with nests as north as the&nbsp;Carolina beaches. Circumglobal in tropical and temperate seas and&nbsp;oceans.</p> </font>
-				<font face="AvenirNext-Regular" size="4" color="005295"> 
+				content: `<font face="Helvetica Neue" size="4" color="005295"><p>They prefer to feed in coastal bays and estuaries, and can sometimes be found feeding in the shallow waters along the continental shelf of the&nbsp;Atlantic Ocean. Loggerhead sea turtles have a wide range. They can be found throughout&nbsp;the western Atlantic from Canada to Argentina, with nests as north as the&nbsp;Carolina beaches. Circumglobal in tropical and temperate seas and&nbsp;oceans.</p> </font>
+				<font face="Helvetica Neue" size="4" color="005295"> 
 				<p>Class: Reptilia - snakes, crocodiles, lizards and turtles</p>
 				<p>Order: Testudines - turtles</p>
 				<p>Family: Cheloniidae - sea turtles which have shells covered with&nbsp;scutes (horny plates)</p>
@@ -330,8 +330,8 @@ export class AnimalProviderService {
 				name: "Manatee",
 				description: "<h1>Manatee</h1>",
 				image: "assets/icon/manatee.jpg",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"> <p>The manatee can be found in fresh, brackish, or salt water; they tend&nbsp;to stay near the coastline or in coastal lagoons, rivers and springs.&nbsp;They are mainly tropical in distribution.&nbsp;The manatee has been known to travel up the coast to the Chesapeake&nbsp;Bay and as far west as Texas, but are typically only found off the&nbsp;Florida coast here in the U.S.; Gulf of Mexico, Caribbean Sea-from Florida to Guyana.</p> </font>
-				<font face="AvenirNext-Regular" size="4" color="005295"> 
+				content: `<font face="Helvetica Neue" size="4" color="005295"> <p>The manatee can be found in fresh, brackish, or salt water; they tend&nbsp;to stay near the coastline or in coastal lagoons, rivers and springs.&nbsp;They are mainly tropical in distribution.&nbsp;The manatee has been known to travel up the coast to the Chesapeake&nbsp;Bay and as far west as Texas, but are typically only found off the&nbsp;Florida coast here in the U.S.; Gulf of Mexico, Caribbean Sea-from Florida to Guyana.</p> </font>
+				<font face="Helvetica Neue" size="4" color="005295"> 
 				<p>Class: Reptilia - snakes, crocodiles, lizards and turtles</p>
 				<p>Order: Testudines - turtles</p>
 				<p>Family: Cheloniidae - sea turtles which have shells covered with&nbsp;scutes (horny plates)</p>
@@ -381,8 +381,8 @@ export class AnimalProviderService {
 				name: "Moon Jelly",
 				description: "<h1>Moon Jelly</h1>",
 				image: "assets/icon/Moon_jellyfish_at_Gota_Sagher.JPG",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"> <p>The moon jelly can be found in open waters. They are commonly found in open waters of the Atlantic Ocean, the Indian&nbsp;Ocean, the Pacific Ocean, and the Mediterranean Sea.</p> </font>
-				<font face="AvenirNext-Regular" size="4" color="005295"> 
+				content: `<font face="Helvetica Neue" size="4" color="005295"> <p>The moon jelly can be found in open waters. They are commonly found in open waters of the Atlantic Ocean, the Indian&nbsp;Ocean, the Pacific Ocean, and the Mediterranean Sea.</p> </font>
+				<font face="Helvetica Neue" size="4" color="005295"> 
 				<p>Class: Scyphozoa &ndash; jellyfish</p>
 				<p>Order: Semaeostomeae</p>
 				<p>Family: Ulmaridae</p>
@@ -416,8 +416,8 @@ export class AnimalProviderService {
 				name: "North American River Otter",
 				description: "<h1>North American River Otter</h1>",
 				image: "assets/icon/river_otter.jpg",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"> <p>River otters inhabit coastal estuaries, river systems and even mountain streams. &nbsp;Sightings of river otters in the wild are rare because this species prefers areas of low human activity. &nbsp;Water quality will also dictate a habitat&rsquo;s potential for otter inhabitance &ndash; the animals prefer clean, clear water where food is abundant.&nbsp;They once ranged throughout most of Canada and the eastern and central United States. &nbsp;Today, they are found in isolated populations within that former range where suitable habitat still exists. &nbsp;&nbsp;In South Carolina river otters can be found throughout the state, ranging from the Blue Ridge to the ACE Basin.</p> </font>
-				<font face="AvenirNext-Regular" size="4" color="005295">
+				content: `<font face="Helvetica Neue" size="4" color="005295"> <p>River otters inhabit coastal estuaries, river systems and even mountain streams. &nbsp;Sightings of river otters in the wild are rare because this species prefers areas of low human activity. &nbsp;Water quality will also dictate a habitat&rsquo;s potential for otter inhabitance &ndash; the animals prefer clean, clear water where food is abundant.&nbsp;They once ranged throughout most of Canada and the eastern and central United States. &nbsp;Today, they are found in isolated populations within that former range where suitable habitat still exists. &nbsp;&nbsp;In South Carolina river otters can be found throughout the state, ranging from the Blue Ridge to the ACE Basin.</p> </font>
+				<font face="Helvetica Neue" size="4" color="005295">
 				<p>Class: Mammalia - mammals</p>
 				<p>Order: Carnivora -carnivores (meat-eaters)</p>
 				<p>Family: Mustelidae - otters, martens, weasels, wolverines, and badgers</p>
@@ -462,9 +462,9 @@ export class AnimalProviderService {
 				name: "Osprey",
 				description: "<h1>Osprey</h1>",
 				image: "assets/icon/osprey.jpg",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"><p>Ospreys have a wide distribution because they are able to live almost anywhere where there are safe nest sites and shallow water with abundant fish. Nests are generally found within 3 to 5 km of a water body such as a salt marsh, mangrove (Rhizophora) swamp, cypress (Taxodium) swamp, lake, bog, reservoir or river. The frequency with which each of these habitat types is used varies by geographic region. &nbsp;Ospreys choose structures that can support a bulky nest, and that are safe from ground-based predators. Nest sites can be safe from predators either by being difficult for a predator to climb (e.g. on a cliff) or by being over water or on a small island. Over-water nest sites that are often used by ospreys include buoys and channel markers, dead trees and artificial nest platforms. Ospreys have also been known to nest on various man-made structures, such as power poles, duck blinds, communication towers, buildings and even billboards. In many cases, nests that are built on artificial structures such as nest platforms and power poles are more stable and fledge more chicks per breeding season than nests on naturally-occuring structures.</p>
+				content: `<font face="Helvetica Neue" size="4" color="005295"><p>Ospreys have a wide distribution because they are able to live almost anywhere where there are safe nest sites and shallow water with abundant fish. Nests are generally found within 3 to 5 km of a water body such as a salt marsh, mangrove (Rhizophora) swamp, cypress (Taxodium) swamp, lake, bog, reservoir or river. The frequency with which each of these habitat types is used varies by geographic region. &nbsp;Ospreys choose structures that can support a bulky nest, and that are safe from ground-based predators. Nest sites can be safe from predators either by being difficult for a predator to climb (e.g. on a cliff) or by being over water or on a small island. Over-water nest sites that are often used by ospreys include buoys and channel markers, dead trees and artificial nest platforms. Ospreys have also been known to nest on various man-made structures, such as power poles, duck blinds, communication towers, buildings and even billboards. In many cases, nests that are built on artificial structures such as nest platforms and power poles are more stable and fledge more chicks per breeding season than nests on naturally-occuring structures.</p>
 				<p>Ospreys have a worldwide distribution, wintering or breeding on every continent except Antarctica. Ospreys are not known to breed in South America or Indo-Malasia, but are sometimes found there in the winter. Ospreys are winter breeders in Egypt and some Red Sea islands. Regions where ospreys are particularly abundant include Scandinavia and the Chesapeake Bay region of the United States. &nbsp;There are four subspecies of ospreys, which are separated by geographic region. &nbsp;The subspecies that can is found in South Carolina, Pandion haliaetus carolinensis, breeds in North America and the Caribbean, and winters in South America.</p> </font>
-				<font face="AvenirNext-Regular" size="4" color="005295">
+				<font face="Helvetica Neue" size="4" color="005295">
 				<p>Class: Aves--birds</p>
 				<p>Order: &nbsp;Falconiformes -- This order contains three families, around 76 genera and over 300 species. The birds of this order are raptors or birds of prey such as hawks, eagles, kites and falcons. They have strong, curved talons. Their bills have hooked tips, sharp edges and a fleshy cere at the base.</p>
 				<p>Family:&nbsp; Accipitridae &ndash; Family made up of Hawks, Eagles, Kites and Osprey.</p>
@@ -511,8 +511,8 @@ export class AnimalProviderService {
 				name: "Oyster",
 				description: "<h1>Oyster</h1>",
 				image: "assets/icon/Oyster_reef_Hunting_Island_SC.jpg",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"><p>Oysters are commonly found in estuaries, tidal creeks, and salt marshes.&nbsp;The oyster is found off the coast of North America from the Gulf of St. Lawrence to Florida.</p></font>
-				<font face="AvenirNext-Regular" size="4" color="005295"> 
+				content: `<font face="Helvetica Neue" size="4" color="005295"><p>Oysters are commonly found in estuaries, tidal creeks, and salt marshes.&nbsp;The oyster is found off the coast of North America from the Gulf of St. Lawrence to Florida.</p></font>
+				<font face="Helvetica Neue" size="4" color="005295"> 
 				<p>Class: Bivalvia (Pelecypoda) - mussels, clams and scallops</p>
 				<p>Order: Ostreina</p>
 				<p>Family: Ostreidae - oysters</p>
@@ -566,8 +566,8 @@ export class AnimalProviderService {
 				name: "Red Drum",
 				description: "<h1>Red Drum</h1>",
 				image: "assets/icon/Red_Drum.jpg",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"> <p>The red drum is commonly found in shallow water along edges of bays, tidal creeks, oyster reefs.&nbsp;They are found along the east coast of North America from Massachusetts to northern Mexico</p> </font>
-				<font face="AvenirNext-Regular" size="4" color="005295">
+				content: `<font face="Helvetica Neue" size="4" color="005295"> <p>The red drum is commonly found in shallow water along edges of bays, tidal creeks, oyster reefs.&nbsp;They are found along the east coast of North America from Massachusetts to northern Mexico</p> </font>
+				<font face="Helvetica Neue" size="4" color="005295">
 				<p>Class:&nbsp;Actinopterygii &ndash; ray-finned fishes</p>
 				<p>Order: Perciformes &ndash; perch-like fishes</p>
 				<p>Family:&nbsp;Sciaenidae &ndash; drum family, includes spot, corakers, cubbyu, high-hats, jackknife-fish and kingfish.</p>
@@ -610,8 +610,8 @@ export class AnimalProviderService {
 				name: "Sand Fiddler Crab",
 				description: "<h1>Sand Fiddler Crab</h1>",
 				image: "assets/icon/sand_fiddler_crab.jpg",
-				content: `<font face="AvenirNext-Regular" size="4" color="005295"><p>The sand fiddler crab is commonly found at the sandy edges of salt marshes, tidal flats and on protected beaches. &nbsp;Here, it forms large aggregations that live in burrows it digs in the sandy substrate. &nbsp;These burrows generally have only one opening, and can be up to 2ft (60cm) deep. &nbsp;Sand fiddler crabs will usually feed close to these burrows so that they can quickly retreat if they are disturbed. &nbsp;The crabs will use a &ldquo;mud plug&rdquo; to close the opening of their burrow during high tide. &nbsp;They also will retreat to their burrows in the winter to hibernate and will remain there until the water warms up. Sand fiddler crabs can be found along the eastern coast of North America from Cape Cod to Texas.</p></font>
-				<font face="AvenirNext-Regular" size="4" color="005295">
+				content: `<font face="Helvetica Neue" size="4" color="005295"><p>The sand fiddler crab is commonly found at the sandy edges of salt marshes, tidal flats and on protected beaches. &nbsp;Here, it forms large aggregations that live in burrows it digs in the sandy substrate. &nbsp;These burrows generally have only one opening, and can be up to 2ft (60cm) deep. &nbsp;Sand fiddler crabs will usually feed close to these burrows so that they can quickly retreat if they are disturbed. &nbsp;The crabs will use a &ldquo;mud plug&rdquo; to close the opening of their burrow during high tide. &nbsp;They also will retreat to their burrows in the winter to hibernate and will remain there until the water warms up. Sand fiddler crabs can be found along the eastern coast of North America from Cape Cod to Texas.</p></font>
+				<font face="Helvetica Neue" size="4" color="005295">
 				<p>Phylum: &nbsp;Arthropoda &ndash; crustaceans, insects, and chelicerates</p>
 				<p>Subphylum:&nbsp;Crustacea &ndash; barnacles, copepods, crabs, shrimp, lobsters</p>
 				<p>Class: &nbsp;Malacastraca &ndash; crabs, shrimp, krill, lobsters, crayfish</p>
@@ -662,9 +662,9 @@ export class AnimalProviderService {
 				name: "Snowy Egret",
 				description: "<h1>Snowy Egret</h1>",
 				image: "assets/icon/Snowy_Egret.jpg",
-				content : `<font face="AvenirNext-Regular" size="4" color="005295"><p>The snowy egret is commonly found along the coast, marshes, river valleys, and the edges of lakes. &nbsp;</p>
+				content : `<font face="Helvetica Neue" size="4" color="005295"><p>The snowy egret is commonly found along the coast, marshes, river valleys, and the edges of lakes. &nbsp;</p>
 				<p>They are found along the east coast of North America, down to along the Gulf coast. &nbsp;They can also be found along the west coast of North America and further inland in the southwest. Following the breeding season, some snowy egrets may migrate north and then back south during the winters.</p> </font>
-				<font face="AvenirNext-Regular" size="4" color="005295">
+				<font face="Helvetica Neue" size="4" color="005295">
 				<p>Class:&nbsp;Aves &ndash; birds</p>
 				<p>Order: &nbsp;Ciconiiformes &ndash; includes herons, bitterns, storks, ibises, gannets and boobies</p>
 				<p>Family: &nbsp;Ardeidae &ndash; includes herons, egrets and bitterns</p>

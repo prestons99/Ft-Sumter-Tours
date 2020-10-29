@@ -1,4 +1,3 @@
-<ion-content></ion-content>
 <ion-app>
 	<ion-split-pane contentId="main-content">
 		<ion-menu contentId="main-content" type="overlay">
@@ -11,8 +10,7 @@
 				</div>
 				<ion-list id="inbox-list">
 					<ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-						<ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="full"
-							detail="false" [class.selected]="selectedIndex == i">
+						<ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="full" detail="false" [class.selected]="selectedIndex == i">
 							<ion-label class='ion-no-margin'>{{ p.title }}</ion-label>
 						</ion-item>
 					</ion-menu-toggle>
