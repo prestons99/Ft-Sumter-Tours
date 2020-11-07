@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
 	selector: 'app-back-button',
@@ -10,8 +12,15 @@ export class BackButtonComponent implements OnInit {
 
 	@Input('color') color = 'light';
 
-	constructor() { }
+	constructor(
+		private navCtrl : NavController
+	) { }
 
 	ngOnInit() { }
+
+
+	goBack(){
+		this.navCtrl.back();
+	}
 
 }

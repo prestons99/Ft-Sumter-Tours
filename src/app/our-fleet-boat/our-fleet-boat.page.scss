@@ -1,0 +1,29 @@
+app-background-header{
+	height: 150px;
+}
+
+ion-button{
+	--border-radius	: 0px;
+	--box-shadow : none;
+	font-size : 18px;
+	margin-bottom: 1px !important;
+}
+
+.boat-heading{
+	font-size: 20px;
+	font-weight: 300;
+}
+
+
+.page-heading{
+	padding-top: 16px;
+	padding-bottom: 8px;
+	text-align: center;
+	font-size: 22px;
+	color: var(--ion-color-primary);
+}
+
+app-canon-spacer{
+	width: 200px;
+	margin: auto;
+}

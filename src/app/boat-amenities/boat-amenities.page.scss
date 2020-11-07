@@ -1,0 +1,48 @@
+app-background-header{
+	height: 150px;
+}
+
+ion-button{
+	--border-radius	: 0px;
+	--box-shadow : none;
+	font-size : 18px;
+	margin-bottom: 1px !important;
+}
+
+.boat-heading{
+	font-size: 24px !important;
+	font-weight: 300;
+}
+
+
+.page-heading{
+	padding-top: 16px;
+	padding-bottom: 8px;
+	text-align: center;
+	font-size: 22px;
+	color: var(--ion-color-primary);
+}
+
+app-canon-spacer{
+	width: 200px;
+	margin: auto;
+}
+
+ion-segment-button{
+	--indicator-color : transparent;
+	--background : rgba(var(--ion-color-secondary-rgb), 0.5);
+	--background-checked : var(--ion-color-secondary);
+	font-weight: bold;
+	text-transform: unset !important;
+	--color : white;
+	--color-checked : white;
+	font-size: 16px;
+}
+
+ion-footer ion-toolbar{
+	--border-color : transparent;
+}
+
+ion-slides{
+	height: 100%;
+}

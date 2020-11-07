@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import Parse from 'parse';
-import { promise } from 'protractor';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, pipe } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
 
 
 @Injectable({
@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 export class ParseService {
 
 	public config: ParseConfigLoader = new ParseConfigLoader();
-	public fleet : ParseFleetLoader = new ParseFleetLoader();
+	public fleet: ParseFleetLoader = new ParseFleetLoader();
 
 	init() {
 		Parse.serverURL = 'https://parseapi.back4app.com/';
@@ -39,10 +39,10 @@ class ParseLoaderClass {
 		if (bypassIsLoading == true && bypassIsLoading == true)
 			return;
 
-		this.loadInternal().then((data)=>{
+		this.loadInternal().then((data) => {
 			this.data$.next(data);
 			this.isLoading$.next(false);
-		}).catch((err)=>{
+		}).catch((err) => {
 			console.log(err);
 		})
 
@@ -57,7 +57,7 @@ class ParseLoaderClass {
 
 	}
 
-	loadInternal() : Promise<any>{return;};
+	loadInternal(): Promise<any> { return; };
 
 	isLoaded(): boolean {
 		if (this.data$.getValue() === null) {
@@ -76,7 +76,7 @@ class ParseLoaderClass {
 class ParseConfigLoader extends ParseLoaderClass {
 
 	loadInternal() {
-		return Parse.Config.get().then((val)=>{
+		return Parse.Config.get().then((val) => {
 			return (val as any).attributes;
 		});
 	}
@@ -85,6 +85,21 @@ class ParseConfigLoader extends ParseLoaderClass {
 
 
 class ParseFleetLoader extends ParseLoaderClass {
+
+
+	forBoatId(id) {
+		return this.data$.pipe(map((boats) => {
+			boats = boats && Array.isArray(boats) ? boats : [];
+			let boat = null;
+			boats.forEach((b)=>{
+				if(b.objectId == id){
+					boat = b;
+				}
+			})
+			console.log(boat);
+			return boat;
+		}),pipe(shareReplay()));
+	}
 
 	loadInternal() {
 		let query = new Parse.Query("Boat");

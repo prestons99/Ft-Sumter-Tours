@@ -1,0 +1,35 @@
+<ion-header>
+	<ion-toolbar class="ion-no-padding">
+		<app-background-header
+			[background]="((boat$ | async)?.imageFile?.url) || ('assets/icon/spiritline_cruises_fleet.png')">
+			<ion-buttons slot="start">
+				<app-back-button color='light'></app-back-button>
+			</ion-buttons>
+			<div class='boat-heading' slot="heading">Amenities</div>
+		</app-background-header>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ng-container *ngIf='!(boat$ | async)'>
+		<app-loading-spinner></app-loading-spinner>
+	</ng-container>
+	<ng-container *ngIf='(boat$ | async)'>
+		<ion-slides [options]='{zoom: {maxRatio: 1}}'>
+			<ion-slide>
+				<div class="swiper-zoom-container">
+					<img [src]="(boat$ | async)?.amenitiesLvlOneFile?.url">
+				</div>
+			</ion-slide>
+		</ion-slides>
+	</ng-container>
+</ion-content>
+<ion-footer>
+	<ion-toolbar class='ion-no-padding'>
+		<ion-segment value='1' mode='md'>
+			<ion-segment-button *ngIf='(boat$ | async)?.amenitiesLvlOneFile?.url' value='1'>Level 1</ion-segment-button>
+			<ion-segment-button *ngIf='(boat$ | async)?.amenitiesLvlTwoFile?.url' value='2'>Level 2</ion-segment-button>
+			<ion-segment-button *ngIf='(boat$ | async)?.amenitiesLvlThreeFile?.url' value='3'>Level 3
+			</ion-segment-button>
+		</ion-segment>
+	</ion-toolbar>
+</ion-footer>

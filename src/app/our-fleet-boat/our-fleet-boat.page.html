@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>our-fleet-boat</ion-title>
-  </ion-toolbar>
+	<ion-toolbar class="ion-no-padding">
+		<app-background-header [background]="((boat$ | async)?.imageFile?.url) || ('assets/icon/spiritline_cruises_fleet.png')">
+			<ion-buttons slot="start">
+				<app-back-button color='light'></app-back-button>
+			</ion-buttons>
+			<div class='boat-heading' slot="heading">{{(boat$ | async)?.title || ""}}</div>
+		</app-background-header>
+	</ion-toolbar>
 </ion-header>
+<ion-content class='ion-no-padding'>
+	
 
-<ion-content>
+	<ng-container *ngIf='!(boat$ | async)'>
+		<app-loading-spinner></app-loading-spinner>
+	</ng-container>
+	<ng-container *ngIf='(boat$ | async)'>
+		<ion-button (click)='goToAmenities()' class='ion-no-padding ion-no-margin' mode='ios' size='small' expand="block" color='secondary'>
+			Amenities
+		</ion-button>
+		<ion-button class='ion-no-padding ion-no-margin' mode='ios' size='small' expand="block" color='secondary'>
+			360 Tours
+		</ion-button>
+		<div class='page-heading'>
+			Boat Features
+		</div>
+		<app-canon-spacer color='dark'></app-canon-spacer>
+		<div class='ion-padding' [innerHTML]='(boat$ | async)?.details'></div>
+	</ng-container>
+	
 
 </ion-content>

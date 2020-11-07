@@ -120,18 +120,6 @@ const routes: Routes = [
     loadChildren: () => import('./egret/egret.module').then( m => m.EgretPageModule)
   },
   {
-    path: 'spirit-charleston',
-    loadChildren: () => import('./spirit-charleston/spirit-charleston.module').then( m => m.SpiritCharlestonPageModule)
-  },
-  {
-    path: 'spirit-low-amenities',
-    loadChildren: () => import('./spirit-low-amenities/spirit-low-amenities.module').then( m => m.SpiritLowAmenitiesPageModule)
-  },
-  {
-    path: 'spirit-chs-amenities',
-    loadChildren: () => import('./spirit-chs-amenities/spirit-chs-amenities.module').then( m => m.SpiritChsAmenitiesPageModule)
-  },
-  {
     path: 'construction',
     loadChildren: () => import('./construction/construction.module').then( m => m.ConstructionPageModule)
   },
@@ -167,6 +155,11 @@ const routes: Routes = [
     path: 'our-fleet-boat',
     loadChildren: () => import('./our-fleet-boat/our-fleet-boat.module').then( m => m.OurFleetBoatPageModule)
   },
+  {
+    path: 'boat-amenities',
+    loadChildren: () => import('./boat-amenities/boat-amenities.module').then( m => m.BoatAmenitiesPageModule)
+  },
+
 ];
 
 @NgModule({

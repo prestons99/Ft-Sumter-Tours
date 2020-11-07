@@ -19,8 +19,7 @@ export class OurFleetPage {
 	}
 
 	goToBoat(boat) {
-		console.log(boat);
-		this.router.navigate(['our-fleet-boat'],{
+		this.router.navigate(['/our-fleet-boat'],{
 			queryParams : {
 				boatId : boat.objectId
 			}
