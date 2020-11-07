@@ -2,6 +2,10 @@ app-background-header{
 	height: 150px;
 }
 
+ion-content{
+	--overflow : hidden !important;
+}
+
 ion-button{
 	--border-radius	: 0px;
 	--box-shadow : none;
@@ -43,6 +47,6 @@ ion-footer ion-toolbar{
 	--border-color : transparent;
 }
 
-ion-slides{
+pinch-zoom{
 	height: 100%;
 }

@@ -11,6 +11,7 @@ import { ParseService } from '../parse.service';
 export class BoatAmenitiesPage implements OnInit {
 
 	boat$ : Observable<any>;
+	level : String = null;
 
 
 	constructor(
@@ -24,6 +25,14 @@ export class BoatAmenitiesPage implements OnInit {
 				this.boat$ = this.parseProvider.fleet.forBoatId(boatId);
 			}
 		});
+	}
+
+	setActiveImage($event){
+		this.level = $event.detail.value;
+	}
+
+	segmentClicked(){
+		console.log("asdasd");
 	}
 
 	ngOnInit(){}

@@ -8,6 +8,7 @@ import { BoatAmenitiesPageRoutingModule } from './boat-amenities-routing.module'
 
 import { BoatAmenitiesPage } from './boat-amenities.page';
 import { ComponentsModule } from '../components/components.module';
+import { PinchZoomModule } from 'ngx-pinch-zoom';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { ComponentsModule } from '../components/components.module';
     IonicModule,
 	BoatAmenitiesPageRoutingModule,
 	ComponentsModule,
+	PinchZoomModule,
   ],
   declarations: [BoatAmenitiesPage]
 })

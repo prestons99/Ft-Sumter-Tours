@@ -14,22 +14,23 @@
 		<app-loading-spinner></app-loading-spinner>
 	</ng-container>
 	<ng-container *ngIf='(boat$ | async)'>
-		<ion-slides [options]='{zoom: {maxRatio: 1}}'>
-			<ion-slide>
-				<div class="swiper-zoom-container">
-					<img [src]="(boat$ | async)?.amenitiesLvlOneFile?.url">
-				</div>
-			</ion-slide>
-		</ion-slides>
+		<pinch-zoom backgroundColor='white' *ngIf='!level || level == "level1"'>
+			<img [src]="(boat$ | async)?.amenitiesLvlOneFile?.url" />
+		</pinch-zoom>
+		<pinch-zoom backgroundColor='white' *ngIf='level == "level2"'>
+			<img [src]='(boat$ | async)?.amenitiesLvlTwoFile?.url' />
+		</pinch-zoom>
+		<pinch-zoom backgroundColor='white' *ngIf='level == "level3"'>
+			<img [src]='(boat$ | async)?.amenitiesLvlThreeFile?.url' />
+		</pinch-zoom>
 	</ng-container>
 </ion-content>
 <ion-footer>
 	<ion-toolbar class='ion-no-padding'>
-		<ion-segment value='1' mode='md'>
-			<ion-segment-button *ngIf='(boat$ | async)?.amenitiesLvlOneFile?.url' value='1'>Level 1</ion-segment-button>
-			<ion-segment-button *ngIf='(boat$ | async)?.amenitiesLvlTwoFile?.url' value='2'>Level 2</ion-segment-button>
-			<ion-segment-button *ngIf='(boat$ | async)?.amenitiesLvlThreeFile?.url' value='3'>Level 3
-			</ion-segment-button>
+		<ion-segment (ionChange)="setActiveImage($event)" value='level1' mode='md'>
+			<ion-segment-button *ngIf='(boat$ | async)?.amenitiesLvlOneFile?.url' value='level1'>Level 1</ion-segment-button>
+			<ion-segment-button *ngIf='(boat$ | async)?.amenitiesLvlTwoFile?.url' value='level2'>Level 2</ion-segment-button>
+			<ion-segment-button *ngIf='(boat$ | async)?.amenitiesLvlThreeFile?.url' value='level3'>Level 3</ion-segment-button>
 		</ion-segment>
 	</ion-toolbar>
 </ion-footer>
