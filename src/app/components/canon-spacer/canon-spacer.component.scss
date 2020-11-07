@@ -11,6 +11,11 @@ app-canon-spacer{
 	.spacer-border{
 		border-top: 1px solid white;
 	}
+
+	.spacer-border--dark{
+		border-color: var(--ion-color-primary);
+	}
+
 }
 
 

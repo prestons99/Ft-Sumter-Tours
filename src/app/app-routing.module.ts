@@ -120,10 +120,6 @@ const routes: Routes = [
     loadChildren: () => import('./egret/egret.module').then( m => m.EgretPageModule)
   },
   {
-    path: 'spirit-lowcountry',
-    loadChildren: () => import('./spirit-lowcountry/spirit-lowcountry.module').then( m => m.SpiritLowcountryPageModule)
-  },
-  {
     path: 'spirit-charleston',
     loadChildren: () => import('./spirit-charleston/spirit-charleston.module').then( m => m.SpiritCharlestonPageModule)
   },
@@ -167,7 +163,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
-
+  {
+    path: 'our-fleet-boat',
+    loadChildren: () => import('./our-fleet-boat/our-fleet-boat.module').then( m => m.OurFleetBoatPageModule)
+  },
 ];
 
 @NgModule({

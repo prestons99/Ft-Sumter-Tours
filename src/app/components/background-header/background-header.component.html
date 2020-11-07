@@ -1,9 +1,25 @@
 <div class='background-header' [ngStyle]="{'background-image' : 'url('+background+')'}">
-	<!-- <ng-content select='[slot="top"]'></ng-content> -->
-	<ion-grid class='title-wrapper'>
-		<ion-row>
-			<ion-col>
-				<ng-content select='[slot="title"]'></ng-content>
+	<ion-grid class='toolbar-wrapper ion-no-padding'>
+		<ion-row class='ion-no-padding'>
+			<ion-col class='ion-no-padding' size="auto">
+				<div class='button-wrapper'>
+					<ng-content select='[slot=start]'></ng-content>
+				</div>
+			</ion-col>
+			<ion-col class='ion-no-padding'></ion-col>
+			<ion-col class='ion-no-padding' size="auto">
+				<div>
+					<ng-content slot='end'></ng-content>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+	<ion-grid class='title-wrapper ion-no-padding'>
+		<ion-row class='ion-no-padding'>
+			<ion-col class='ion-no-padding'>
+				<div class='ion-text-center header-text'>
+					<ng-content select='[slot=heading]'></ng-content>
+				</div>
 			</ion-col>
 		</ion-row>
 	</ion-grid>

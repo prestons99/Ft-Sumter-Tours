@@ -1,4 +1,4 @@
-<table>
+<table *ngIf='color == "light"'>
 	<tr>
 		<td width='50%'>
 			<div class='spacer-border'></div>
@@ -8,6 +8,19 @@
 		</td>
 		<td width='50%'>
 			<div class='spacer-border'></div>
+		</td>
+	</tr>
+</table>
+<table *ngIf='color == "dark"'>
+	<tr>
+		<td width='50%'>
+			<div class='spacer-border spacer-border--dark'></div>
+		</td>
+		<td>
+			<img src='assets/icon/cannon_blue.png' />
+		</td>
+		<td width='50%'>
+			<div class='spacer-border spacer-border--dark'></div>
 		</td>
 	</tr>
 </table>

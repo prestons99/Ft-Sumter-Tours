@@ -1,24 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ParseService } from '../parse.service';
 
 @Component({
-  selector: 'app-our-fleet',
-  templateUrl: './our-fleet.page.html',
-  styleUrls: ['./our-fleet.page.scss'],
+	selector: 'app-our-fleet',
+	templateUrl: './our-fleet.page.html',
+	styleUrls: ['./our-fleet.page.scss'],
 })
 export class OurFleetPage {
 
-  constructor(private router: Router) { }
+	public fleetProvider;
 
-  nextpage() {
-    this.router.navigate(['spirit-lowcountry']);
-  }
+	constructor(
+		private router: Router,
+		private parseService : ParseService,
+	){ 
+		this.fleetProvider = parseService.fleet;
+	}
 
-  charleston() {
-    this.router.navigate(['spirit-charleston']);
-  }
-
-  ngOnInit() {
-  }
-
+	goToBoat(boat) {
+		console.log(boat);
+		this.router.navigate(['our-fleet-boat'],{
+			queryParams : {
+				boatId : boat.objectId
+			}
+		});
+	}
 }

@@ -1,36 +1,33 @@
-<ion-header collapse="condense">
-	<ion-toolbar class="new-background-color">
-		<ion-buttons slot="start">
-			<ion-menu-button color="light"></ion-menu-button>
-		</ion-buttons>
-		<ion-title color="light">Our Fleet</ion-title>
+<ion-header>
+	<ion-toolbar class="ion-no-padding">
+		<app-background-header background="assets/icon/spiritline_cruises_fleet.png">
+			<ion-buttons slot="start">
+				<ion-menu-button color='light'></ion-menu-button>
+			</ion-buttons>
+			<div slot="heading">OUR FLEET</div>
+		</app-background-header>
 	</ion-toolbar>
 </ion-header>
 <ion-content>
-	<font face="Helvetica Neue" size = "24" color="005295">
-		<div [ngStyle]='{"background-image" : "url(assets/icon/spirit_of_lowcountry.jpg)" }' class='section-image' (click)="nextpage()">
+
+	<app-loading-spinner *ngIf='fleetProvider?.isLoading$ | async'></app-loading-spinner>
+	<div *ngIf='(fleetProvider?.data$ | async) != null'>
+		<div *ngFor='let boat of (fleetProvider?.data$ | async)' [ngStyle]='{"background-image" : "url("+boat?.imageFile?.url+")" }' class='section-image'
+			(click)="nextpage()">
 			<div class='white-overlay'>
 				<ion-grid class='grid-text'>
 					<ion-row>
-						<ion-col class='ion-text-center'>
-							Spirit of Lowcountry
+						<ion-col  class='ion-text-center'>
+							<div class='lbl-boat-title'>
+								{{boat?.title}}
+							</div>
+							<div class='lbl-boat-subtitle'>
+								Liberty Square - Charleston
+							</div>
 						</ion-col>
 					</ion-row>
 				</ion-grid>
 			</div>
 		</div>
-	</font>
-	<font face="Helvetica Neue" size = "24" color="005295">
-		<div [ngStyle]='{"background-image" : "url(assets/icon/spiritline_cruises_spirit_of_charleston.jpg)" }' class='section-image1' (click)="charleston()">
-			<div class='white-overlay'>
-				<ion-grid class='grid-text'>
-					<ion-row>
-						<ion-col class='ion-text-center'>
-							Spirit of Charleston
-						</ion-col>
-					</ion-row>
-				</ion-grid>
-			</div>
-		</div>
-	</font>
+	</div>
 </ion-content>

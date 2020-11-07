@@ -1,27 +1,29 @@
 <!-- <ion-header>
 	<ion-toolbar class="ion-no-padding">
 		<app-background-header background="assets/icon/mainmenu1.jpg">
-			<div slot="title">Marine Life</div>
+			<ion-buttons slot="start">
+				<app-back-button></app-back-button>
+				<ion-menu-button color='light'></ion-menu-button>
+			</ion-buttons>
+			<div slot="heading">Marine Life</div>
 		</app-background-header>
 	</ion-toolbar>
 </ion-header> -->
 <ion-content [scrollX]="false" [scrollY]="false">
 
-
 	<div class='absolute-container'>
-
 
 		<div class='menu-button-wrapper'>
 			<ion-menu-button color='light'></ion-menu-button>
-		</div> 
-	
+		</div>
+
 		<div class='filled-grid'>
 			<ion-grid class='ion-no-padding'>
 				<ion-row class='ion-no-padding'>
 					<ion-col class='ion-align-self-center col-page-content'>
 						<img src='assets/icon/logo_white.png' />
 						<div class='lbl-app-name'>
-							FORT<br/>SUMTER
+							FORT<br />SUMTER
 						</div>
 						<app-canon-spacer></app-canon-spacer>
 						<div class='lbl-monument'>
@@ -35,25 +37,25 @@
 						<div class='btn-sidemenu btn-sidemenu--overview'>
 							<img src='assets/icon/home/overview.png' />
 							<div class='btn-label'>
-								Overview
+								Welcome
 							</div>
 						</div>
 						<div class='btn-sidemenu btn-sidement--360'>
 							<img src='assets/icon/home/360vr.png' />
 							<div class='btn-label'>
-								360 VR<br/>Tour
+								360 VR<br />Tour
 							</div>
 						</div>
 						<div class='btn-sidemenu btn-sidement--postcard'>
 							<img src='assets/icon/home/postcard.png' />
 							<div class='btn-label'>
-								PostCard<br/>Photo
+								PostCard<br />Photo
 							</div>
 						</div>
 						<div class='btn-sidemenu btn-sidement--viewfinder'>
 							<img src='assets/icon/home/viewfinder.png' />
 							<div class='btn-label'>
-								PostCard<br/>Photo
+								PostCard<br />Photo
 							</div>
 						</div>
 					</ion-col>
@@ -83,7 +85,7 @@
 
 		</ion-slides>
 
-		
+
 
 	</div>
 

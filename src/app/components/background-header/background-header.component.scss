@@ -7,13 +7,28 @@
 .background-header{
 	height: 100%;
 	background-size: cover;
+	background-position: center;
 }
 
 .title-wrapper{
-
+	background-color: rgba(0,0,0,0.4);
 	height: 100%;
 	width: 100%;
 	justify-content: center;
+	display: flex;
+    flex-direction: column;
+}
+
+.header-text{
+	font-size: 20px;
+	color: white;
+}
 
 
+.toolbar-wrapper{
+	padding-left: 10px;
+	padding-top : calc( var(--ion-safe-area-top, 0) + 10px );
+	position: absolute;
+	height: 100%;
+	width: 100%;
 }
