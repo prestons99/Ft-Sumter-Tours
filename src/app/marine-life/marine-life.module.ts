@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { MarineLifePageRoutingModule } from './marine-life-routing.module';
 
 import { MarineLifePage } from './marine-life.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MarineLifePageRoutingModule
+	MarineLifePageRoutingModule,
+	ComponentsModule,
   ],
   declarations: [MarineLifePage]
 })

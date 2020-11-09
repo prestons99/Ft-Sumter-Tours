@@ -1,63 +1,17 @@
 <ion-header>
-  <ion-toolbar class="new-background-color">
-    <div class="section-with-image">
-      <div class='section-overlay'>
-        <ion-buttons slot="secondary">
-          <ion-back-button text="" color="light"></ion-back-button>
-          <ion-menu-button color="light"></ion-menu-button>
-        </ion-buttons>
-      </div>
-    </div>
-    <ion-title color="light">Marine Life</ion-title>
-  </ion-toolbar>
+	<ion-toolbar class="ion-no-padding">
+		<app-background-header background="assets/icon/marine_header.jpg">
+			<ion-buttons slot="start">
+				<app-back-button color='light'></app-back-button>
+			</ion-buttons>
+			<div slot="heading">MARINE LIFE</div>
+		</app-background-header>
+	</ion-toolbar>
 </ion-header>
 <ion-content>
-	<div *ngIf='(animalService?.isLoading$ | async)' class="ion-padding ion-margin ion-text-center">
-    <ion-spinner ></ion-spinner>
-  </div>
-  <ion-list>
-    <ion-item button (click)='openAnimal(animal.id)' lines="full" detail="false" *ngFor='let animal of (animalService.animals$ | async)'>
-      <img class='img-animal' [src]='animal?.image' slot='start' />
-      <ion-label>
-        {{animal?.name}}
-      </ion-label>
-    </ion-item>
-  </ion-list>
-
-	<!-- <div class='div1'>
-	<div class='div2'> -->
-	<!-- <ion-button>Button</ion-button>
-		<ion-grid>
-			<ion-row>
-				<ion-col>Heading</ion-col>
-			</ion-row>
-		</ion-grid> -->
-	<!-- </div>
-  </div>
-
-  <div class='div3'></div> -->
-	<!-- 
-  <div class='sidebar'>
-	<div class='sidebar-button'></div>
-	<div class='sidebar-button'></div>
-</div>
-
-	<ion-slides [options]="{fadeEffect: {
-		crossFade: true
-	  },autoplay: {
-		delay: 1000
-	  }}">
-		<ion-slide class='first-slide'></ion-slide>
-		<ion-slide class='second-slide'>
-			2<br />2-1
-		</ion-slide>
-		<ion-slide class='third-slide'>3</ion-slide>
-	</ion-slides>
-
-	 -->
-
-
-
-
-
+	<app-loading-spinner *ngIf='(provider?.isLoading$ | async)'></app-loading-spinner>
+	<ng-container *ngIf='!(provider?.isLoading$ | async)'>
+		<app-image-item (onClick)='openAnimal(item)' [background]='item?.imageFile?.url' [title]='item?.title' *ngFor='let item of (provider?.data$ | async)'>
+		</app-image-item>
+	</ng-container>
 </ion-content>

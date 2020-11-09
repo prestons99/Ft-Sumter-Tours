@@ -1,60 +1,25 @@
-<ion-header collapse="condense">
-	<ion-toolbar class="new-background-color">
-		<ion-buttons slot="start">
-			<ion-menu-button color="light"></ion-menu-button>
-		</ion-buttons>
-		<ion-title color="light">Fort Sumter</ion-title>
+<ion-header>
+	<ion-toolbar class="ion-no-padding">
+		<app-background-header [background]="(provider?.data$ | async)?.imageFile?.url">
+			<ion-buttons slot="start">
+				<ion-menu-button color='light'></ion-menu-button>
+			</ion-buttons>
+			<div slot="heading">{{(provider?.data$ | async)?.title}}</div>
+		</app-background-header>
 	</ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true" class="ion-padding">
-
-	<section class="full-width">
-		<header></header>
-		<ion-button expand="full" (click)="yes()" color="primary">Overview</ion-button>
-	</section>
-
-	<section class="full-width">
-		<header></header>
-		<ion-button expand="full" (click)="go()" color="primary">Amenities</ion-button>
-	</section>
-
-	<section class="full-width">
-		<header></header>
-		<ion-button expand="full" (click)="beacon()" color="primary">Beacon Locations</ion-button>
-	</section>
-
-	<!-- <section class="full-width">
-		<header></header>
-		<ion-button expand="full" (click)="tours()" color="primary">360 Tours</ion-button>
-	</section> -->
-
-	<div class="row">
-		<div class="col">
-			<div class="text-center">
-				<h5 style="text-align: center;">History</h5>
-			</div>
+<ion-content>
+	<app-btn-square (onClick)='overview()' title="Overview"></app-btn-square>
+	<app-btn-square (onClick)='imageView("amenities")' title="Amenities"></app-btn-square>
+	<app-btn-square (onClick)='imageView("beacon_locations")' title="Beacon Locations"></app-btn-square>
+	<app-btn-square title="360 Tours"></app-btn-square>
+	<app-btn-square title="Time Machine"></app-btn-square>
+	<app-loading-spinner *ngIf='provider?.isLoading$ | async'></app-loading-spinner>
+	<ng-container *ngIf='!(provider?.isLoading$ | async)'>
+		<div class='page-heading'>
+			History
 		</div>
-	</div>
-
-
-	<ion-grid>
-		<ion-row>
-			<ion-col class='logo-border ion-no-padding ion-align-self-center'></ion-col>
-			<ion-col><img alt="logo" class="header_logo" src="assets/icon/cannon_blue.png"></ion-col>
-			<ion-col class='logo-border ion-no-padding ion-align-self-center'></ion-col>
-		</ion-row>
-	</ion-grid>
-		
-
-	
-	<font face="Helvetica-Neue" size = "5" color="005295">
-		<p>Fort Sumter, located at the harbor entrance to historic Charleston, South Carolina, is best known as the place &ldquo;where the Civil War began.&rdquo;&nbsp;</p>
-		<p>Believing that newly-elected President Abraham Lincoln would restrict the expansion of slavery, South Carolina convention delegates voted unanimously to secede from the Union on December 20, 1860.&nbsp; As other southern states followed and then joined together to form the Confederacy, federal buildings across the south fell under their control &ndash; post offices, arsenals, custom houses and fortifications.&nbsp; By April, Fort Sumter was the only significant fort in the south, still in Federal hands.</p>
-		<p>A small group of Federal soldiers under the command of Major Robert Anderson had occupied the fort since December 26, hoping to hold it for the Union.&nbsp; For four months, Anderson and his 83 men waited for word from the President.&nbsp; Should they surrender the fort, or would they be reinforced?&nbsp; No clear answer came.</p>
-		<p>By April 12, 1861, Confederate General P.G.T. Beauregard decided they&rsquo;d waited long enough for a peaceful resolution.&nbsp; He ordered a gun battery at Fort Johnson (on James Island) to open fire on the fort.</p>
-		<p>After a 34-hour battle Anderson and his men surrendered, and Confederate forces occupied the fort.&nbsp; For the next three years, Union forces would try to take it back.&nbsp; Their massive rifled cannons on Morris Island fired tons of shot and shell into the fort, effectively breaching the walls.&nbsp; Even so, the Confederates inside continued to hold possession.&nbsp; Only when Union General William Tecumseh Sherman made his famous march to the sea, effectively cutting Confederate supply lines to Charleston, did the Confederate forces finally evacuate Fort Sumter and the city of Charleston.&nbsp; The war ended just two months later.</p>
-		<p>As you explore the fort today, consider its significance in our American story.&nbsp; The first shots fired here that day began a conflict that would result in the loss of more than 700,000 lives over the next four years.&nbsp; To Northerners, the fort represents Lincoln&rsquo;s stand against secession and his eventual vision of the war as the &ldquo;fiery trial&rdquo; that would end slavery.&nbsp; For Southerners, the fort is a touchstone for their pride in Confederate courage and sacrifice.&nbsp; For African-Americans, it&rsquo;s a tangible connection to the enslaved workers who made the bricks and built the fort walls.&nbsp; Fort Sumter represents a beacon of hope for the fulfillment of a promise &ndash; that &ldquo;all men are created equal.&rdquo;&nbsp;</p>
-		<p>The fort is listed on the National Register of Historic Places. Fort Sumter Tours, under contract with the National Park Service, is the only authorized concessioner which provides public access to the fort.</p>					</font>
-			
-
+		<app-canon-spacer color='dark'></app-canon-spacer>
+		<div class='ion-padding' [innerHTML]="(provider?.data$ | async)?.details"></div>
+	</ng-container>
 </ion-content>

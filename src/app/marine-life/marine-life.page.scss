@@ -1,11 +1,13 @@
-.new-background-color{
-    --background: #d41c1c;
+.page-heading{
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	color: var(--ion-color-primary);
 }
 
-p {
-    color: #567cce;
-}
-
-.full-width {
-    margin-top: -3px,
+app-canon-spacer{
+	width : 200px;
+	margin: auto;
 }

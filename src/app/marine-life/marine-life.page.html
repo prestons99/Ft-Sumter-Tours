@@ -1,39 +1,43 @@
+<ion-header>
+	<ion-toolbar class="ion-no-padding">
+		<app-background-header background="assets/icon/marine_header.jpg">
+			<ion-buttons slot="start">
+				<app-back-button color='light'></app-back-button>
+			</ion-buttons>
+			<div slot="heading">MARINE LIFE</div>
+		</app-background-header>
+	</ion-toolbar>
+</ion-header>
 
-  <ion-header collapse="condense">
-    <ion-toolbar class="new-background-color">
-      <ion-buttons slot="start">
-        <ion-menu-button color="light"></ion-menu-button>
-      </ion-buttons>
-      <ion-title color="light">Marine Life</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class='ion-no-padding'>
+	<app-btn-square (onClick)='section = "overview"' title="Overview"></app-btn-square>
+	<app-btn-square (onClick)='section = "our_impact"' title="Our Impact"></app-btn-square>
+	<app-btn-square (onClick)='animals()' title="Animals"></app-btn-square>
 
-<ion-content class="ion-padding">
-    <section class="full-width">
-      <header></header>
-      <ion-button expand="full" (click)="impact()" color="primary">Our Impact</ion-button>
-    </section>
 
-    <section class="full-width">
-      <header></header>
-      <ion-button expand="full" (click)="animals()" color="primary">Animals</ion-button>
-    </section>
+	<app-loading-spinner *ngIf='(provider?.isLoading$ | async)'></app-loading-spinner>
 
-    <div class="row">
-      <div class="col">
-          <div class="text-center">
-              <h5 style="text-align: center;">Overview</h5>
-          </div>
-      </div>
-  </div>
-  <font face="Helvetica Neue" size = "5" color="005295">
-    <p>The sparkling waters of the Lowcountry in South Carolina are home to a variety of marine life.
-      The main reason for this is because of the very diverse ecosystem. A combination of areas
-      with saltwater, freshwater, and brackish water (salt/freshwater mix) give home to a diverse
-      community of marine life. It is not uncommon to see a group of bottlenose dolphins playing around
-      near Fort Sumter during your visit, or racing the boat! you will definitely see a laughing gull
-      or two (or twenty!) flying over your head. How many different Lowcountry creatures can you spot
-      on your trip to Fort Sumter?
-    </p>
-  </font>
+	<ng-container *ngIf='!(provider?.isLoading$ | async)'>
+		<div class='page-heading'>
+			{{section == "overview" ? "Overview" : "Our Impact"}}
+		</div>
+		<app-canon-spacer color='dark'></app-canon-spacer>
+		<div class='ion-padding'>
+			<ng-container *ngIf='section == "overview"'>
+				<div [innerHTML]='(provider?.data$ | async)?.marineLifeText'></div>
+			</ng-container>
+			<ng-container *ngIf='section == "our_impact"'>
+				<div [innerHTML]='(provider?.data$ | async)?.ourImpactText'></div>
+			</ng-container>
+		</div>
+		
+
+
+	</ng-container>
+
+
+	
+
+
+
 </ion-content>

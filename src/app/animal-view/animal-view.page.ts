@@ -1,24 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AnimalProviderService } from '../animal-provider.service';
+import { Observable } from 'rxjs';
+import { ParseService } from '../parse.service';
 
 @Component({
 	selector: 'app-animal-view',
 	templateUrl: './animal-view.page.html',
 	styleUrls: ['./animal-view.page.scss'],
+	encapsulation : ViewEncapsulation.None,
 })
 export class AnimalViewPage implements OnInit {
 
 
-	public animal = null;
+	public animal : Observable<any> = new Observable();
 
 	constructor(
 		public activatedRoute: ActivatedRoute,
-		public animalService: AnimalProviderService,
+		public parseService : ParseService,
 	) {
 		this.activatedRoute.queryParams.subscribe((data) => {
 			let animalId = data.animalId;
-			this.animal = this.animalService.getAnimal(animalId);
+			this.parseService.animals.load(true);
+			if(animalId){
+				this.animal = this.parseService.animals.forId(animalId);
+			}
 		});
 	}
 

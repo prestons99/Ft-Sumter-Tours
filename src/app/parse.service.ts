@@ -11,13 +11,21 @@ export class ParseService {
 
 	public config: ParseConfigLoader = new ParseConfigLoader();
 	public fleet: ParseFleetLoader = new ParseFleetLoader();
+	public fort: ParseFortLoader = new ParseFortLoader();
+	public history : ParseFortHistoryLoader = new ParseFortHistoryLoader();
+	public animals : ParseAnimalLoader = new ParseAnimalLoader();
 
 	init() {
 		Parse.serverURL = 'https://parseapi.back4app.com/';
 		Parse.initialize("1HhKdcMa9ziwRn7UFtVOG0V4lMT9PNoMpwj1Tt9R", "mzkrcfpNFXWOwiTcNiwYMpvQCX8GdU0X8cIiCDEq");
 
-		this.config.load();
-		this.fleet.load();
+		this.config.load(true);
+		this.fleet.load(true);
+		this.fort.load(true);
+		this.history.load(true);
+		this.animals.load(true);
+
+
 	}
 
 
@@ -43,17 +51,14 @@ class ParseLoaderClass {
 			this.data$.next(data);
 			this.isLoading$.next(false);
 		}).catch((err) => {
-			console.log(err);
+			if (aggressive) {
+				setTimeout(() => {
+					this.load(aggressive, true);
+				}, 1000);
+			} else {
+				this.isLoading$.next(false);
+			}
 		})
-
-		if (aggressive) {
-			setTimeout(() => {
-				this.load(aggressive, true);
-			}, 1000);
-		} else {
-			this.isLoading$.next(false);
-		}
-
 
 	}
 
@@ -88,16 +93,15 @@ class ParseFleetLoader extends ParseLoaderClass {
 
 
 	forBoatId(id) {
-		return this.data$.pipe(map((boats) => {
-			boats = boats && Array.isArray(boats) ? boats : [];
-			let boat = null;
-			boats.forEach((b)=>{
+		return this.data$.pipe(map((items) => {
+			items = items && Array.isArray(items) ? items : [];
+			let item = null;
+			items.forEach((b)=>{
 				if(b.objectId == id){
-					boat = b;
+					item = b;
 				}
 			})
-			console.log(boat);
-			return boat;
+			return item;
 		}),pipe(shareReplay()));
 	}
 
@@ -110,4 +114,64 @@ class ParseFleetLoader extends ParseLoaderClass {
 		});
 	}
 
+}
+
+class ParseFortLoader extends ParseLoaderClass{
+
+	loadInternal(){
+		let query = new Parse.Query("FortSumter");
+		return query.first().then((d)=>{
+			return d.toJSON();
+		});
+	}
+
+}
+
+class ParseFortHistoryLoader extends ParseLoaderClass{
+
+	forId(id) {
+		return this.data$.pipe(map((items) => {
+			items = items && Array.isArray(items) ? items : [];
+			let item = null;
+			items.forEach((b)=>{
+				if(b.objectId == id){
+					item = b;
+				}
+			})
+			return item;
+		}),pipe(shareReplay()));
+	}
+
+
+	loadInternal(){
+		let query = new Parse.Query("History");
+		return query.find().then((list)=>{
+			return list.map((e)=>e.toJSON());
+		});
+	}
+}
+
+
+class ParseAnimalLoader extends ParseLoaderClass{
+
+	forId(id) {
+		return this.data$.pipe(map((items) => {
+			items = items && Array.isArray(items) ? items : [];
+			let item = null;
+			items.forEach((b)=>{
+				if(b.objectId == id){
+					item = b;
+				}
+			})
+			return item;
+		}),pipe(shareReplay()));
+	}
+
+
+	loadInternal(){
+		let query = new Parse.Query("Animal");
+		return query.find().then((list)=>{
+			return list.map((e)=>e.toJSON());
+		});
+	}
 }

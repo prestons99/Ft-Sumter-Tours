@@ -1,29 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ParseService } from '../parse.service';
 
 @Component({
-  selector: 'app-fort-sumter',
-  templateUrl: './fort-sumter.page.html',
-  styleUrls: ['./fort-sumter.page.scss'],
+	selector: 'app-fort-sumter',
+	templateUrl: './fort-sumter.page.html',
+	styleUrls: ['./fort-sumter.page.scss'],
 })
 export class FortSumterPage {
 
-  constructor(private router: Router) { }
+	public provider;
 
-  go() {
-    this.router.navigate(['amenities']);
-  }
+	constructor(
+		private router: Router,
+		private parseService : ParseService,
+	) { 
+		this.provider = this.parseService.fort;
+		this.parseService.fort.load();
+	}
 
-  yes() {
-    this.router.navigate(['overview']);
-  }
+	// go() {
+	// 	this.router.navigate(['amenities']);
+	// }
 
-  beacon() {
-    this.router.navigate(['beacon-locations']);
-  }
+	overview() {
+		this.router.navigate(['overview']);
+	}
 
-  tours() {
-    this.router.navigate(['tours3d']);
-  }
+	imageView(type){
+		this.router.navigate(['fort-sumter-image-view'],{
+			queryParams : { type }
+		})
+	}
+
+
+	// tours() {
+	// 	this.router.navigate(['tours3d']);
+	// }
 }
 

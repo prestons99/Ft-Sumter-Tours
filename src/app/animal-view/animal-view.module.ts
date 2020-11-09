@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { AnimalViewPageRoutingModule } from './animal-view-routing.module';
 
 import { AnimalViewPage } from './animal-view.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AnimalViewPageRoutingModule
+	AnimalViewPageRoutingModule,
+	ComponentsModule,
   ],
   declarations: [AnimalViewPage]
 })

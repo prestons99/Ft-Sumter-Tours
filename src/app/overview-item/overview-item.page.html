@@ -1,0 +1,18 @@
+<ion-header>
+	<ion-toolbar class="ion-no-padding">
+		<app-background-header [background]="(item | async)?.imageFile?.url">
+			<ion-buttons slot="start">
+				<app-back-button color='light'></app-back-button>
+			</ion-buttons>
+			<div slot="heading">
+				{{(item | async)?.title}}
+			</div>
+		</app-background-header>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<app-loading-spinner *ngIf='!(item | async)?.objectId'></app-loading-spinner>
+	<ng-container *ngIf='(item | async)?.objectId'>
+		<div class='ion-padding' [innerHTML]='(item | async)?.text'></div>
+	</ng-container>
+</ion-content>

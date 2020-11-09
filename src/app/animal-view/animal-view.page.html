@@ -1,14 +1,19 @@
-<ion-header>
-	<ion-toolbar class="new-background-color">
-		<ion-buttons slot="start">
-			<ion-back-button text="" color="light"></ion-back-button>
-			<ion-menu-button color="light"></ion-menu-button>
-		</ion-buttons>
-		<ion-title color="light">Animals</ion-title>
-	</ion-toolbar>
-</ion-header>
 <ion-content>
-	<img [src]='animal?.image' />
-	<div [innerHTML]='animal?.description'></div>
-	<div [innerHTML]='animal?.content'></div>
+	<app-background-header [background]="(animal | async)?.imageFile?.url">
+		<ion-buttons slot="start">
+			<app-back-button color='light'></app-back-button>
+		</ion-buttons>
+	</app-background-header>
+
+
+	<app-loading-spinner *ngIf='!(animal | async)?.objectId'></app-loading-spinner>
+	<ng-container *ngIf='(animal | async)?.objectId'>
+		<div class='ion-text-center page-heading'>
+			{{(animal | async)?.title}}
+		</div>
+		<div class='lbl-small ion-padding-start ion-padding-end'>Habitat:</div>
+		<div [innerHTML]='(animal | async)?.habitat' class='lbl-description ion-padding-end ion-padding-start'></div>
+		<div class='lbl-small ion-padding-top ion-margin-top ion-padding-start ion-padding-end'>Facts:</div>
+		<div [innerHTML]='(animal | async)?.text' class='lbl-description ion-padding-start ion-padding-end'></div>
+	</ng-container>
 </ion-content>

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { FortSumterPageRoutingModule } from './fort-sumter-routing.module';
 
 import { FortSumterPage } from './fort-sumter.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FortSumterPageRoutingModule
+	FortSumterPageRoutingModule,
+	ComponentsModule,
   ],
   declarations: [FortSumterPage]
 })

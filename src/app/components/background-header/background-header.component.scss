@@ -1,6 +1,7 @@
 :host{
 	display: block;
-	height: 124px;
+	height: 120px;
+	height: calc( var(--ion-safe-area-top, 0) + 120px );
 }
 
 
@@ -12,6 +13,7 @@
 
 .title-wrapper{
 	background-color: rgba(0,0,0,0.4);
+	padding-top : var(--ion-safe-area-top, 0);
 	height: 100%;
 	width: 100%;
 	justify-content: center;
@@ -20,8 +22,11 @@
 }
 
 .header-text{
-	font-size: 20px;
+	font-size: 26px;
+    font-weight: 300;
 	color: white;
+	padding-right: 12px;
+	padding-left: 12px;
 }
 
 

@@ -1,31 +1,12 @@
-.new-background-color{
-    --background: #d41c1c;
+.page-heading{
+	padding-top: 16px;
+	padding-bottom: 8px;
+	text-align: center;
+	font-size: 22px;
+	color: var(--ion-color-primary);
 }
 
-p {
-    color: #567cce;
-}
-
-.header_logo{
-	height: 36px;
-	display: block;
+app-canon-spacer{
+	width: 200px;
 	margin: auto;
 }
-
-ion-grid{
-	width: 70%;
-	display: block;
-	margin: auto;
-}
-
-.logo-border{
-	border-bottom: 1px solid #567cce;
-}
-.full-width{
-	margin-top: -3px;
-}
-
-.ion-padding {
-	padding: 5px;
-}
-

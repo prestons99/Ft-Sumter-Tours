@@ -1,0 +1,22 @@
+<ion-header>
+	<ion-toolbar class="ion-no-padding">
+		<app-background-header [background]="(provider?.data$ | async)?.imageFile?.url">
+			<ion-buttons slot="start">
+				<app-back-button color='light'></app-back-button>
+			</ion-buttons>
+			<div *ngIf='type == "amenities"' slot="heading">Amenities</div>
+			<div *ngIf='type == "beacon_locations"' slot="heading">Beacon Locations</div>
+		</app-background-header>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<app-loading-spinner *ngIf='provider?.isLoading$ | async'></app-loading-spinner>
+	<ng-container *ngIf='!(provider?.isLoading$ | async)'>
+		<pinch-zoom backgroundColor='white' *ngIf='type == "amenities"'>
+			<img [src]='(provider?.data$ | async)?.amenitiesFile?.url' />
+		</pinch-zoom>
+		<pinch-zoom backgroundColor='white' *ngIf='type == "beacon_locations"'>
+			<img [src]='(provider?.data$ | async)?.beaconsFile?.url' />
+		</pinch-zoom>
+	</ng-container>
+</ion-content>

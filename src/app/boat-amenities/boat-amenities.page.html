@@ -1,7 +1,7 @@
 <ion-header>
 	<ion-toolbar class="ion-no-padding">
 		<app-background-header
-			[background]="((boat$ | async)?.imageFile?.url) || ('assets/icon/spiritline_cruises_fleet.png')">
+			[background]="((boat$ | async)?.imageFile?.url) || ('assets/icon/fleet_header.png')">
 			<ion-buttons slot="start">
 				<app-back-button color='light'></app-back-button>
 			</ion-buttons>
@@ -24,6 +24,7 @@
 			<img [src]='(boat$ | async)?.amenitiesLvlThreeFile?.url' />
 		</pinch-zoom>
 	</ng-container>
+	<img class='img-legend' src='assets/icon/legend.png' />
 </ion-content>
 <ion-footer>
 	<ion-toolbar class='ion-no-padding'>

@@ -1,6 +1,6 @@
 <ion-header>
 	<ion-toolbar class="ion-no-padding">
-		<app-background-header [background]="((boat$ | async)?.imageFile?.url) || ('assets/icon/spiritline_cruises_fleet.png')">
+		<app-background-header [background]="((boat$ | async)?.imageFile?.url) || ('assets/icon/fleet_header.png')">
 			<ion-buttons slot="start">
 				<app-back-button color='light'></app-back-button>
 			</ion-buttons>
@@ -15,12 +15,8 @@
 		<app-loading-spinner></app-loading-spinner>
 	</ng-container>
 	<ng-container *ngIf='(boat$ | async)'>
-		<ion-button (click)='goToAmenities()' class='ion-no-padding ion-no-margin' mode='ios' size='small' expand="block" color='secondary'>
-			Amenities
-		</ion-button>
-		<ion-button class='ion-no-padding ion-no-margin' mode='ios' size='small' expand="block" color='secondary'>
-			360 Tours
-		</ion-button>
+		<app-btn-square (onClick)='goToAmenities()' title="Amenities"></app-btn-square>
+		<app-btn-square title="360 Tours"></app-btn-square>
 		<div class='page-heading'>
 			Boat Features
 		</div>
