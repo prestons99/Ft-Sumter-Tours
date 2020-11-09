@@ -33,6 +33,10 @@ export class FortSumterPage {
 		})
 	}
 
+	timeTravel(){
+		this.router.navigate(['time-travel'],{});
+	}
+
 
 	// tours() {
 	// 	this.router.navigate(['tours3d']);

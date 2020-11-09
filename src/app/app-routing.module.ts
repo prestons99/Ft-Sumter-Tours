@@ -74,7 +74,11 @@ const routes: Routes = [
   {
     path: 'fort-sumter-image-view',
     loadChildren: () => import('./fort-sumter-image-view/fort-sumter-image-view.module').then( m => m.FortSumterImageViewPageModule)
+  },  {
+    path: 'time-travel',
+    loadChildren: () => import('./time-travel/time-travel.module').then( m => m.TimeTravelPageModule)
   },
+
 
 
 ];
