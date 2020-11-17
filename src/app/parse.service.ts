@@ -14,6 +14,7 @@ export class ParseService {
 	public fort: ParseFortLoader = new ParseFortLoader();
 	public history : ParseFortHistoryLoader = new ParseFortHistoryLoader();
 	public animals : ParseAnimalLoader = new ParseAnimalLoader();
+	public timeTravel : ParseTimeTravelLoader = new ParseTimeTravelLoader(); 
 
 	init() {
 		Parse.serverURL = 'https://parseapi.back4app.com/';
@@ -24,8 +25,8 @@ export class ParseService {
 		this.fort.load(true);
 		this.history.load(true);
 		this.animals.load(true);
-
-
+		this.timeTravel.load(true);
+		
 	}
 
 
@@ -170,6 +171,29 @@ class ParseAnimalLoader extends ParseLoaderClass{
 
 	loadInternal(){
 		let query = new Parse.Query("Animal");
+		return query.find().then((list)=>{
+			return list.map((e)=>e.toJSON());
+		});
+	}
+}
+
+class ParseTimeTravelLoader extends ParseLoaderClass{
+
+	forId(id) {
+		return this.data$.pipe(map((items) => {
+			items = items && Array.isArray(items) ? items : [];
+			let item = null;
+			items.forEach((b)=>{
+				if(b.objectId == id){
+					item = b;
+				}
+			})
+			return item;
+		}),pipe(shareReplay()));
+	}
+
+	loadInternal(){
+		let query = new Parse.Query("TimeMachine");
 		return query.find().then((list)=>{
 			return list.map((e)=>e.toJSON());
 		});

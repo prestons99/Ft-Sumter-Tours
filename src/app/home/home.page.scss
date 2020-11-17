@@ -82,7 +82,7 @@ ion-slides {
 }
 
 .menu-button-wrapper{
-	padding-top : var(--ion-safe-area-top);
+	margin-top : var(--ion-safe-area-top);
 	position: absolute;
 	z-index: 4;
 	height: 60px;

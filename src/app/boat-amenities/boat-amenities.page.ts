@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { take } from 'rxjs/operators';
 import { ParseService } from '../parse.service';
 
 @Component({
@@ -19,7 +20,9 @@ export class BoatAmenitiesPage implements OnInit {
 		public parseProvider : ParseService
 	){
 		this.parseProvider.fleet.load();
-		this.activatedRoute.queryParams.subscribe((params)=>{
+		this.activatedRoute.queryParams
+		.pipe(take(1))
+		.subscribe((params)=>{
 			if(params && params.boatId){
 				let boatId = params.boatId;
 				this.boat$ = this.parseProvider.fleet.forBoatId(boatId);
@@ -32,7 +35,7 @@ export class BoatAmenitiesPage implements OnInit {
 	}
 
 	segmentClicked(){
-		console.log("asdasd");
+		
 	}
 
 	ngOnInit(){}

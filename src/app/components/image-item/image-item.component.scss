@@ -8,8 +8,11 @@
 .lbl-item{
 	font-size: 14px;
 	padding-left: 8px;
+	overflow: initial !important;
+	word-wrap: initial !important;
 }
 
 ion-item{
 	--border-color : rgba(100,100,100,0.1);
 }
+

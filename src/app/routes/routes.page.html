@@ -1,13 +1,15 @@
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar class="new-background-color">
-      <ion-buttons slot="start">
-        <ion-menu-button color="light"></ion-menu-button>
-      </ion-buttons>
-      <ion-title color="light">Routes</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-content text-center>
-    <p align="center"><ion-img src="assets/icon/routes.png" width="128"></ion-img></p>
-  </ion-content>
+<ion-header>
+	<ion-toolbar class="ion-no-padding-imp">
+		<app-background-header [background]="'assets/icon/mainmenu2.jpg'">
+			<ion-buttons slot="start">
+				<app-back-button color='light'></app-back-button>
+			</ion-buttons>
+			<div slot="heading">
+				Routes
+			</div>
+		</app-background-header>
+	</ion-toolbar>
+</ion-header>
+<ion-content [scrollY]="false">
+	<agm-map></agm-map>
+</ion-content>

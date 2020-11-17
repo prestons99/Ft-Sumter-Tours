@@ -6,6 +6,11 @@ ion-menu{
 	--width: 250px;
 }
 
+
+ion-label{
+	font-size: 15px !important;
+}
+
 ion-item{
 	--background : var(--ion-color-primary) !important;
 	color: white;

@@ -1,9 +1,28 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>time-travel</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content [fullscreen]="true" [scrollY]="false">
+	<div slot="fixed">
+		<ion-header>
+			<ion-toolbar>
+				<ion-buttons slot="start">
+					<ion-back-button color="light" text=""></ion-back-button>
+				</ion-buttons>
+			</ion-toolbar>
+		</ion-header>
+	</div>
+	<div class='fixed-left' slot="fixed">
+		{{(provider | async)?.beforeTitle}}
+	</div>
+	<div class='fixed-right' slot="fixed">
+		{{(provider | async)?.afterTitle}}
+	</div>
+	<ng-container *ngIf='!(provider | async)?.objectId'>
+		<div class="ion-padding ion-margin">
+			<app-loading-spinner color='dark'></app-loading-spinner>
+		</div>
+	</ng-container>
+	<ng-container *ngIf='(provider | async)?.objectId'>
+		<img-comparison-slider>
+			<img class='img-before' slot="after" [ngStyle]="{'background-image' : 'url('+(provider | async)?.firstImageFile?.url+')'}" [src]='' />
+			<img class='img-after' slot="before" [ngStyle]="{'background-image' : 'url('+(provider | async)?.secondImageFile?.url+')'}" [src]='' />
+		</img-comparison-slider>
+	</ng-container>
 </ion-content>

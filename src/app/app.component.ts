@@ -4,6 +4,7 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { ParseService } from './parse.service';
+import { Plugins } from '@capacitor/core';
 
 @Component({
   selector: 'app-root',
@@ -38,25 +39,39 @@ export class AppComponent implements OnInit {
       url: '/routes',
     },
     {
-      title: 'Share',
-      url: '/share',
+      title: "Time Machine",
+      url: '/time-machine',
+    },
+    {
+      title: "Share",
+      isCustom: true,
+    },
+    {
+      title: "Settings",
+      url : '/settings',
     },
   ];
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-	private statusBar: StatusBar,
-	private parseService : ParseService,
+    private statusBar: StatusBar,
+    private parseService: ParseService,
   ) {
-	this.initializeApp();
-	parseService.init();
+    this.initializeApp();
+    parseService.init();
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+    });
+  }
+
+  share(){
+    Plugins.Share.share({
+      text : "Check out this cool new app called Fort Sumter Tours! Available for download today! - http://www.fortsumtertours.com",
     });
   }
 

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { TimeTravelPageRoutingModule } from './time-travel-routing.module';
 
 import { TimeTravelPage } from './time-travel.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
 	imports: [
 		CommonModule,
 		FormsModule,
 		IonicModule,
-		TimeTravelPageRoutingModule
+		TimeTravelPageRoutingModule,
+		ComponentsModule,
 	],
 	declarations: [TimeTravelPage]
 })

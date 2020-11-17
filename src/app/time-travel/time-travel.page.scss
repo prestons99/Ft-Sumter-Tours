@@ -1,0 +1,47 @@
+ion-back-button{
+    visibility: visible !important;
+    display: initial;
+}
+
+ion-buttons{
+    --background: transparent !important;
+}
+
+ion-toolbar{
+    --border-width : 0px !important;
+    --background: transparent !important;
+}
+
+img-comparison-slider{
+    --divider-width: 2px;
+    --divider-color: #c0c0c0;
+    --handle-opacity: 0.3;
+    --handle-opacity-active	: 0.3;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.img-before,
+.img-after{
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+
+.fixed-left,
+.fixed-right{
+    position: absolute;
+    bottom: 16px;
+    z-index: 2;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+.fixed-left{
+    left: 16px;
+}
+.fixed-right{
+    right: 16px;
+}

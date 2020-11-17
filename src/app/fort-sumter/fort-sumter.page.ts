@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { take } from 'rxjs/operators';
 import { ParseService } from '../parse.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class FortSumterPage {
 		private parseService : ParseService,
 	) { 
 		this.provider = this.parseService.fort;
-		this.parseService.fort.load();
+		this.parseService.fort.load(true);
+		this.parseService.timeTravel.load(true);
 	}
 
 	// go() {
@@ -34,7 +36,23 @@ export class FortSumterPage {
 	}
 
 	timeTravel(){
-		this.router.navigate(['time-travel'],{});
+
+
+		this.parseService.fort.data$
+		.pipe(take(1))
+		.subscribe((data)=>{
+			if(data && data.timeMachine && data.timeMachine.objectId){
+				this.router.navigate(['time-travel'],{
+					queryParams : {
+						objectId : data.timeMachine.objectId
+					},
+				});
+			}
+		});
+
+		// let title = '';
+
+		
 	}
 
 

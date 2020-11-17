@@ -10,9 +10,19 @@
 				</div>
 				<ion-list id="inbox-list">
 					<ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-						<ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="full" detail="false" [class.selected]="selectedIndex == i">
-							<ion-label class='ion-no-margin'>{{ p.title }}</ion-label>
-						</ion-item>
+
+						<ng-container *ngIf='!p?.isCustom'>
+							<ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="full" detail="false" [class.selected]="selectedIndex == i">
+								<ion-label class='ion-no-margin'>{{ p.title }}</ion-label>
+							</ion-item>
+						</ng-container>
+						<ng-container *ngIf='p?.isCustom'>
+							<ion-item (click)="share()" [routerLink]="[p.url]" lines="full" detail="false">
+								<ion-label class='ion-no-margin'>{{ p.title }}</ion-label>
+							</ion-item>
+						</ng-container>
+
+						
 					</ion-menu-toggle>
 				</ion-list>
 			</ion-content>

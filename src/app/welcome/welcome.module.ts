@@ -14,9 +14,9 @@ import { ComponentsModule } from '../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-	WelcomePageRoutingModule,
-	ComponentsModule,
+    WelcomePageRoutingModule,
+    ComponentsModule,
   ],
   declarations: [WelcomePage]
 })
-export class WelcomePageModule {}
+export class WelcomePageModule { }

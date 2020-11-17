@@ -1,0 +1,14 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button color="light" text=""></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{title}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ng-container *ngIf='!(contentProvider | async)'>
+		<app-loading-spinner></app-loading-spinner>
+	</ng-container>
+	<div class='ion-padding' *ngIf='contentProvider | async' [innerHTML]='contentProvider | async'></div>
+</ion-content>

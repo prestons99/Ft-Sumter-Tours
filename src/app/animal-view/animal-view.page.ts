@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import { take } from 'rxjs/operators';
 import { ParseService } from '../parse.service';
 
 @Component({
@@ -18,7 +19,9 @@ export class AnimalViewPage implements OnInit {
 		public activatedRoute: ActivatedRoute,
 		public parseService : ParseService,
 	) {
-		this.activatedRoute.queryParams.subscribe((data) => {
+		this.activatedRoute.queryParams
+		.pipe(take(1))
+		.subscribe((data) => {
 			let animalId = data.animalId;
 			this.parseService.animals.load(true);
 			if(animalId){

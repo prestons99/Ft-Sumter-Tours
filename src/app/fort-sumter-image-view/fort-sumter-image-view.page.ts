@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { take } from 'rxjs/operators';
 import { ParseService } from '../parse.service';
 
 @Component({
@@ -19,7 +20,9 @@ export class FortSumterImageViewPage{
 		this.provider = this.parseService.fort;
 		this.parseService.fort.load();
 
-		this.activatedRoute.queryParams.subscribe((data)=>{
+		this.activatedRoute.queryParams
+		.pipe(take(1))
+		.subscribe((data)=>{
 			this.type = data.type;
 		});
 

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SharePage } from './share.page';
+import { TimeMachinePage } from './time-machine.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: SharePage
+    component: TimeMachinePage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SharePageRoutingModule {}
+export class TimeMachinePageRoutingModule {}

@@ -24,10 +24,6 @@ const routes: Routes = [
     loadChildren: () => import('./routes/routes.module').then( m => m.RoutesPageModule)
   },
   {
-    path: 'share',
-    loadChildren: () => import('./share/share.module').then( m => m.SharePageModule)
-  },
-  {
     path: 'welcome',
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
   },
@@ -74,10 +70,27 @@ const routes: Routes = [
   {
     path: 'fort-sumter-image-view',
     loadChildren: () => import('./fort-sumter-image-view/fort-sumter-image-view.module').then( m => m.FortSumterImageViewPageModule)
-  },  {
+  },
+  {
     path: 'time-travel',
     loadChildren: () => import('./time-travel/time-travel.module').then( m => m.TimeTravelPageModule)
   },
+  {
+    path: 'time-machine',
+    loadChildren: () => import('./time-machine/time-machine.module').then( m => m.TimeMachinePageModule)
+  },  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'info-page',
+    loadChildren: () => import('./info-page/info-page.module').then( m => m.InfoPagePageModule)
+  },
+  {
+    path: 'info-page',
+    loadChildren: () => import('./info-page/info-page.module').then( m => m.InfoPagePageModule)
+  },
+
 
 
 

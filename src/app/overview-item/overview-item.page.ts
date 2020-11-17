@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavParams } from '@ionic/angular';
 import { Observable } from 'rxjs';
+import { take } from 'rxjs/operators';
 import { ParseService } from '../parse.service';
 
 @Component({
@@ -18,7 +19,9 @@ export class OverviewItemPage implements OnInit {
 		private activatedRoute : ActivatedRoute,
 	){ 
 		this.parseService.history.load(true);
-		this.activatedRoute.queryParams.subscribe((data)=>{
+		this.activatedRoute.queryParams
+		.pipe(take(1))
+		.subscribe((data)=>{
 			let objectId = data.objectId;
 			if(objectId){
 				this.item = this.parseService.history.forId(objectId);

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NavParams } from '@ionic/angular';
 import { Observable } from 'rxjs';
+import { take } from 'rxjs/operators';
 import { ParseService } from '../parse.service';
 
 @Component({
@@ -22,7 +23,9 @@ export class OurFleetBoatPage{
 		public router : Router,
 	){
 		this.parseProvider.fleet.load();
-		this.activatedRoute.queryParams.subscribe((params)=>{
+		this.activatedRoute.queryParams
+		.pipe(take(1))
+		.subscribe((params)=>{
 			if(params && params.boatId){
 				this.boatId = params.boatId;
 				this.boat$ = this.parseProvider.fleet.forBoatId(this.boatId);
