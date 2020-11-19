@@ -1,11 +1,13 @@
+<ion-header>
+	<ion-toolbar class='ion-no-padding-imp'>
+		<app-background-header [background]="(animal | async)?.imageFile?.url">
+			<ion-buttons slot="start">
+				<app-back-button color='light'></app-back-button>
+			</ion-buttons>
+		</app-background-header>
+	</ion-toolbar>
+</ion-header>
 <ion-content>
-	<app-background-header [background]="(animal | async)?.imageFile?.url">
-		<ion-buttons slot="start">
-			<app-back-button color='light'></app-back-button>
-		</ion-buttons>
-	</app-background-header>
-
-
 	<app-loading-spinner *ngIf='!(animal | async)?.objectId'></app-loading-spinner>
 	<ng-container *ngIf='(animal | async)?.objectId'>
 		<div class='ion-text-center page-heading'>

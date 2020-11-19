@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -20,7 +19,7 @@ export class BackButtonComponent implements OnInit {
 
 
 	goBack(){
-		this.navCtrl.back();
+		this.navCtrl.pop();
 	}
 
 }

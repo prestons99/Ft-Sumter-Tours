@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { InfoPagePageRoutingModule } from './info-page-routing.module';
 
 import { InfoPagePage } from './info-page.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InfoPagePageRoutingModule
+    InfoPagePageRoutingModule,
+    ComponentsModule,
   ],
   declarations: [InfoPagePage]
 })

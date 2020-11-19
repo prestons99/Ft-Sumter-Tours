@@ -6,6 +6,7 @@ import { BackButtonComponent } from './back-button/back-button.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { BtnSquareComponent } from './btn-square/btn-square.component';
 import { ImageItemComponent } from './image-item/image-item.component';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
 	declarations: [
@@ -17,7 +18,8 @@ import { ImageItemComponent } from './image-item/image-item.component';
 		ImageItemComponent,
 	],
 	imports: [
-		CommonModule
+		CommonModule,
+		IonicModule,
 	],
 	exports: [
 		CanonSpacerComponent,

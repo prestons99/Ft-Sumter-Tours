@@ -22,7 +22,7 @@ export class AnimalsPage implements OnInit {
 
 	openAnimal(animal: any) {
 		let animalId = animal.objectId;
-		this.router.navigate(['/animal-view'], {
+		this.router.navigate(['animal-view'], {
 			queryParams: {
 				animalId: animalId
 			}

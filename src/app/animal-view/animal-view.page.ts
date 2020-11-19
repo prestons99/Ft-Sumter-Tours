@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
@@ -10,7 +10,7 @@ import { ParseService } from '../parse.service';
 	styleUrls: ['./animal-view.page.scss'],
 	encapsulation : ViewEncapsulation.None,
 })
-export class AnimalViewPage implements OnInit {
+export class AnimalViewPage implements OnInit, OnDestroy {
 
 
 	public animal : Observable<any> = new Observable();
@@ -19,9 +19,13 @@ export class AnimalViewPage implements OnInit {
 		public activatedRoute: ActivatedRoute,
 		public parseService : ParseService,
 	) {
+
+		console.log("Initiated...........");
+
 		this.activatedRoute.queryParams
 		.pipe(take(1))
 		.subscribe((data) => {
+			console.log("Take");
 			let animalId = data.animalId;
 			this.parseService.animals.load(true);
 			if(animalId){
@@ -31,6 +35,10 @@ export class AnimalViewPage implements OnInit {
 	}
 
 	ngOnInit() {
+	}
+
+	ngOnDestroy(){
+		console.log("On destroed");
 	}
 
 }

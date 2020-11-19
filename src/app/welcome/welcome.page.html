@@ -14,7 +14,7 @@
 	<app-loading-spinner *ngIf='parseService?.config?.isLoading$ | async'></app-loading-spinner>
 
 	<div *ngIf='(parseService?.config?.data$ | async) != null'>
-		<div [innerHTML]='(parseService?.config?.data$ | async).overviewText'></div>
+		<div [innerHTML]='(parseService?.config?.data$ | async)?.overviewText'></div>
 	</div>
 
 </ion-content>

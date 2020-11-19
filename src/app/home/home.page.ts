@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
 	selector: 'app-home',
@@ -19,6 +20,13 @@ export class HomePage {
 		}
 	};
 
-	constructor() { }
+	constructor(
+		private navCtrl : NavController
+	) { }
+
+
+	goToWelcome(){
+		this.navCtrl.navigateRoot(["/welcome"]);
+	}
 
 }
