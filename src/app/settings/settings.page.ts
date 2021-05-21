@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Plugins } from '@capacitor/core';
 import { ParseService } from '../parse.service';
 import { Email } from '@teamhive/capacitor-email';
+import { Platform } from '@ionic/angular';
 
 
 @Component({
@@ -21,10 +22,14 @@ export class SettingsPage implements OnInit {
 	constructor(
 		private parseService: ParseService,
 		private router: Router,
+		private platform : Platform
 	) {
-		this.parseService.config.load(true);
+		try{
+			this.parseService.config.load(true);
+		}catch(e){}
 		try {
 			this.email = new Email();
+			console.log(this.email);
 		} catch (e) {
 
 		}
@@ -45,7 +50,11 @@ export class SettingsPage implements OnInit {
 
 	async customerSupport() {
 
-		let hasPermission = await this.email.hasPermission();
+		if(this.platform.is('android')){
+			return this.sendEmail();
+		}
+
+		let hasPermission = await (this.email.hasPermission());
 		if (!hasPermission) {
 			try {
 				await this.email.requestPermission();

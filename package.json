@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "resources" : "capacitor-resources -p android,ios"
+    "resources": "capacitor-resources -p android,ios"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +31,7 @@
     "@teamhive/capacitor-email": "^2.1.2",
     "@types/parse": "^2.12.7",
     "cordova-plugin-screen-orientation": "^3.0.2",
+    "es6-promise-plugin": "^4.2.2",
     "img-comparison-slider": "^3.0.0",
     "ngx-pinch-zoom": "^2.5.4",
     "parse": "^2.17.0",
