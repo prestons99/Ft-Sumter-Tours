@@ -37,6 +37,7 @@
     "parse": "^2.17.0",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
+    "videojs-vr": "^1.7.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

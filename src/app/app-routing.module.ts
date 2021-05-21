@@ -90,6 +90,10 @@ const routes: Routes = [
     path: 'info-page',
     loadChildren: () => import('./info-page/info-page.module').then( m => m.InfoPagePageModule)
   },
+  {
+    path: 'video',
+    loadChildren: () => import('./video/video.module').then( m => m.VideoPageModule)
+  },
 
 
 

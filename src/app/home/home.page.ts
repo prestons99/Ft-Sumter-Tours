@@ -29,4 +29,14 @@ export class HomePage {
 		this.navCtrl.navigateRoot(["/welcome"]);
 	}
 
+	goToVideo(){
+		if(window.DeviceMotionEvent){
+			window.DeviceMotionEvent.requestPermission().then(console.log).catch(console.error).then(()=>{
+				this.navCtrl.navigateRoot(["/video"]);
+			})
+		}else{
+			this.navCtrl.navigateRoot(["/video"]);
+		}
+	}
+
 }
