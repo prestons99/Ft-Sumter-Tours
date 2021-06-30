@@ -7,3 +7,11 @@
       <ion-title color="light">360 Tours</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content>
+    <app-loading-spinner *ngIf='(provider?.isLoading$ | async)'></app-loading-spinner>
+    <ng-container *ngIf='!(provider?.isLoading$ | async)'>
+      <app-image-item (onClick)='360Video(item)' [background]='item?.imageFile?.url' [title]='item?.title' *ngFor='let item of (provider?.data$ | async)'>
+      </app-image-item>
+    </ng-container>
+  </ion-content>
+
