@@ -15,6 +15,7 @@ export class ParseService {
 	public history : ParseFortHistoryLoader = new ParseFortHistoryLoader();
 	public animals : ParseAnimalLoader = new ParseAnimalLoader();
 	public timeTravel : ParseTimeTravelLoader = new ParseTimeTravelLoader(); 
+	public vrVideo : ParseVRVideoLoader = new ParseVRVideoLoader();
 
 	init() {
 		Parse.serverURL = 'https://parseapi.back4app.com/';
@@ -26,6 +27,7 @@ export class ParseService {
 		this.history.load(true);
 		this.animals.load(true);
 		this.timeTravel.load(true);
+		this.vrVideo.load(true);
 		
 	}
 
@@ -159,6 +161,7 @@ class ParseAnimalLoader extends ParseLoaderClass{
 		return this.data$.pipe(map((items) => {
 			items = items && Array.isArray(items) ? items : [];
 			let item = null;
+			console.log({items, id})
 			items.forEach((b)=>{
 				if(b.objectId == id){
 					item = b;
@@ -194,6 +197,41 @@ class ParseTimeTravelLoader extends ParseLoaderClass{
 
 	loadInternal(){
 		let query = new Parse.Query("TimeMachine");
+		return query.find().then((list)=>{
+			return list.map((e)=>e.toJSON());
+		});
+	}
+}
+
+class ParseVRVideoLoader extends ParseLoaderClass{
+	forId(id) {
+		return this.data$.pipe(map((items) => {
+			items = items && Array.isArray(items) ? items : [];
+			let item = null;
+			items.forEach((b)=>{
+				if(b.objectId == id){
+					item = b;
+				}
+			})
+			return item;
+		}),pipe(shareReplay()));
+	}
+
+	videoForReferenceId(id) {
+		return this.data$.pipe(map((items) => {
+			items = items && Array.isArray(items) ? items : [];
+			let item = null;
+			items.forEach((b)=>{
+				if(b.forObjectId == id && b.active == true){
+					item = b;
+				}
+			})
+			return item;
+		}),pipe(shareReplay())); 
+	}
+
+	loadInternal(){
+		let query = new Parse.Query("VRVideo");
 		return query.find().then((list)=>{
 			return list.map((e)=>e.toJSON());
 		});

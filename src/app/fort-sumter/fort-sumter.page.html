@@ -12,7 +12,7 @@
 	<app-btn-square (onClick)='overview()' title="Overview"></app-btn-square>
 	<app-btn-square (onClick)='imageView("amenities")' title="Amenities"></app-btn-square>
 	<app-btn-square (onClick)='imageView("beacon_locations")' title="Beacon Locations"></app-btn-square>
-	<app-btn-square title="360 Tours"></app-btn-square>
+	<app-btn-square (onClick) = 'tours()' title="360 Tours"></app-btn-square>
 	<app-btn-square (onClick)='timeTravel()' title="Time Machine"></app-btn-square>
 	<app-loading-spinner *ngIf='provider?.isLoading$ | async'></app-loading-spinner>
 	<ng-container *ngIf='!(provider?.isLoading$ | async)'>

@@ -56,8 +56,13 @@ export class FortSumterPage {
 	}
 
 
-	// tours() {
-	// 	this.router.navigate(['tours3d']);
-	// }
+	tours() {
+		
+		this.parseService.fort.data$
+		.pipe(take(1))
+		.subscribe((data)=>{
+		this.parseService.vrVideo.videoForReferenceId(data.objectId).pipe(take(1)).subscribe(console.log)
+		});
+	}
 }
 
