@@ -17,7 +17,7 @@ export class VideoPage implements OnInit, OnDestroy {
     activatedRoute: ActivatedRoute,
 		public parseService : ParseService,
   ){
-
+    this.parseService.ParseVRVideoLoader.load(true);
     this.oService.lockToLandscape();
     this.zone.runOutsideAngular(function(){
       let videoJs = (window as any).videojs;
