@@ -42,10 +42,8 @@ export class VideoPage implements OnInit, OnDestroy {
     });
     
     
-    
+    });  
   }
-}
-
   ngOnDestroy(): void {
       throw new Error('Method not implemented.');
     }
