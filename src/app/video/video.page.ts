@@ -1,18 +1,23 @@
 import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs/internal/Observable';
 import { OrientationService } from '../orientation.service';
+import { ParseService } from '../parse.service';
 @Component({
   selector: 'app-video',
   templateUrl: './video.page.html',
   styleUrls: ['./video.page.scss'],
 })
 export class VideoPage implements OnInit, OnDestroy {
+  public video : Observable<any> = new Observable();
+  oService: any;
+  zone: any;
 
-  constructor(
-    private zone : NgZone,
-    private oService : OrientationService,
-  ) { }
+  constructor( 
+    activatedRoute: ActivatedRoute,
+		public parseService : ParseService,
+  ){
 
-  ngOnInit() {
     this.oService.lockToLandscape();
     this.zone.runOutsideAngular(function(){
       let videoJs = (window as any).videojs;
@@ -24,13 +29,14 @@ export class VideoPage implements OnInit, OnDestroy {
     });
     
     
+    
   }
-
-  ngOnDestroy(){
-    this.oService.lockToPortrait();
+  ngOnDestroy(): void {
+    throw new Error('Method not implemented.');
   }
-
-  
-
-
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 }
+
+
