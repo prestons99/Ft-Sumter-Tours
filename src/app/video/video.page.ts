@@ -25,7 +25,7 @@ export class VideoPage implements OnInit, OnDestroy {
 		.subscribe((data) => {
 			console.log("Take");
 			let videoForReferenceId = data.video;
-			this.parseService.animals.load(true);
+			this.parseService.vrVideo.load(true);
 			if(videoForReferenceId){
 				this.video = this.parseService.vrVideo.forId(videoForReferenceId);
 			}
