@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
+import { take } from 'rxjs/operators';
+import { ParseService } from '../parse.service';
 
 @Component({
 	selector: 'app-home',
@@ -21,8 +24,12 @@ export class HomePage {
 	};
 
 	constructor(
-		private navCtrl : NavController
-	) { }
+		private navCtrl : NavController,
+		private parseService : ParseService,
+		private router : Router,
+	) { 
+		this.parseService.fort.load();
+	}
 
 
 	goToWelcome(){
@@ -30,13 +37,20 @@ export class HomePage {
 	}
 
 	goToVideo(){
-		if(window.DeviceMotionEvent){
-			window.DeviceMotionEvent.requestPermission().then(console.log).catch(console.error).then(()=>{
-				this.navCtrl.navigateRoot(["/video"]);
-			})
-		}else{
-			this.navCtrl.navigateRoot(["/video"]);
-		}
+		this.parseService.fort.data$
+		.pipe(take(1))
+		.subscribe((data)=>{
+			this.router.navigate(["/video"],{
+				queryParams : {
+					forObjectId : data.objectId,
+				},
+			});
+		});
+		
 	}
+
+	
+
+
 
 }

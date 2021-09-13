@@ -1,6 +1,16 @@
-
 <ion-content scrollX='false' scrollY='false' fullscreen='true'>
-	<video id='test' height="100%" width="100%" controls='true' crossorigin="anonymous" class="video-js vjs-default-skin" controls playsinline muted="true">
-		<source src="http://ftsumter.stingraybrandingllc.com/360Videos/Fort%20Sumter-%20Fort%20Museum%20Demo.MP4" type="video/mp4">
+	<ion-fab vertical="top" horizontal="end" slot="fixed">
+		<ion-fab-button (click)="enableDeviceMotion()">
+			<ion-icon name="phone-portrait"></ion-icon>
+		</ion-fab-button>
+	</ion-fab>
+	<ion-fab vertical="top" horizontal="start" slot="fixed">
+		<ion-fab-button (click)="goBack()">
+			<ion-icon name="arrow-back"></ion-icon>
+		</ion-fab-button>
+	</ion-fab>
+	<video *ngIf='(video | async) ? true : false' id='test' height="100%" width="100%" crossorigin="anonymous"
+		controls='true' class="video-js vjs-default-skin" controls playsinline muted="true">
+		<source [src]="(video | async).url" type="video/mp4">
 	</video>
 </ion-content>

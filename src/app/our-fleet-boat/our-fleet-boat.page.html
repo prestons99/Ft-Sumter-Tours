@@ -16,7 +16,7 @@
 	</ng-container>
 	<ng-container *ngIf='(boat$ | async)'>
 		<app-btn-square (onClick)='goToAmenities()' title="Amenities"></app-btn-square>
-		<app-btn-square title="360 Tours"></app-btn-square>
+		<app-btn-square (onClick)='goToVideo()' title="360 Tours"></app-btn-square>
 		<div class='page-heading'>
 			Boat Features
 		</div>

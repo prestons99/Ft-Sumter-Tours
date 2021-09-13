@@ -29,7 +29,6 @@ export class SettingsPage implements OnInit {
 		}catch(e){}
 		try {
 			this.email = new Email();
-			console.log(this.email);
 		} catch (e) {
 
 		}

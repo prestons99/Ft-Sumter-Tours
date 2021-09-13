@@ -161,7 +161,6 @@ class ParseAnimalLoader extends ParseLoaderClass{
 		return this.data$.pipe(map((items) => {
 			items = items && Array.isArray(items) ? items : [];
 			let item = null;
-			console.log({items, id})
 			items.forEach((b)=>{
 				if(b.objectId == id){
 					item = b;

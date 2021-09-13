@@ -33,12 +33,21 @@ export class OurFleetBoatPage{
 		});
 	}
 
+
 	goToAmenities() {
 		this.router.navigate(['/boat-amenities'],{
 			queryParams : {
 				boatId : this.boatId
 			}
 		});
+	}
+
+	goToVideo(){
+		this.router.navigate(['/video'],{
+			queryParams : {
+				forObjectId : this.boatId,
+			}
+		})
 	}
 
 }

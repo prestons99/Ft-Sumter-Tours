@@ -35,6 +35,14 @@ export class FortSumterPage {
 		})
 	}
 
+	goToVideo(forObjectId : string){
+		this.router.navigate(["/video"],{
+			queryParams : {
+				forObjectId : forObjectId,
+			},
+		});
+	}
+
 	timeTravel(){
 
 
@@ -57,11 +65,10 @@ export class FortSumterPage {
 
 
 	tours() {
-		
 		this.parseService.fort.data$
 		.pipe(take(1))
 		.subscribe((data)=>{
-		this.parseService.vrVideo.videoForReferenceId(data.objectId).pipe(take(1)).subscribe(console.log)
+			this.goToVideo(data.objectId);
 		});
 	}
 }
